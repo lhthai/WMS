@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78A9F3A2-DCF3-4B17-AA22-9FEE33649684}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WMS.Models</RootNamespace>
+    <AssemblyName>WMS.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kendo.Mvc">
+      <HintPath>C:\Program Files (x86)\Telerik\UI for ASP.NET MVC Q3 2015\wrappers\aspnetmvc\Binaries\Mvc4\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\PMService.cs" />
+    <Compile Include="App_GlobalResources\Gen_ResourceToDB.cs" />
+    <Compile Include="App_GlobalResources\Gen_ResourceToDB1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gen_ResourceToDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\lang_ENT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang_ENT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\lang_LIST.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang_LIST.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\lang_WHS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lang_WHS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resources.cs" />
+    <Compile Include="App_GlobalResources\Resources1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Attributes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBContext.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_BOM.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_Carrier.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_Cartonization.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_Customer.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_CycleClass.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_CycleCountValidation.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_CycleCountValidationDetail.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_Delivery_Note.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_Item.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_LottableValidation.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_LottableValidationDetail.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_LottableValidationDetailDetail.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_OutboundValidation.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_OutboundValidationDetail.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_Owner.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_Pack.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_ReceiptValidation.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_ReceiptValidationDetail.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_Supplier.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_User.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_V_DateFormat.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_V_DateFormatDetail.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_Warehouse.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENT_Wave.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LIST_Code.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512201438134_v001.cs" />
+    <Compile Include="Migrations\201512201438134_v001.Designer.cs">
+      <DependentUpon>201512201438134_v001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WHS_Adjustment.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Adjustment_Detail.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_ASN.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_ASNDetail.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Consolidate.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_GoodReceiptNote.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Location.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Lot_Attribute.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Maintain_Hold.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Move.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Owner_Label.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Packing_List.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Picking_List.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Pick_Detail.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_PO.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_PODetail.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_ReceiptReversal.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_ReceiptReversalDetail.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Replenishment.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_SO.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_SO_Detail.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Strategy_Putaway.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Strategy_Putaway_Step.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Transaction.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WHS_Zone.cs">
+      <DependentUpon>Attributes.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="App_GlobalResources\Gen_ResourceToDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Gen_ResourceToDB1.cs</LastGenOutput>
+    </None>
+    <None Include="App_GlobalResources\Resources.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Resources1.cs</LastGenOutput>
+    </None>
+    <None Include="Attributes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Attributes.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_GlobalResources\lang_ENT.resx">
+      <DependentUpon>Resources.tt</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_ENT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_GlobalResources\lang_ENT.vi-VN.resx">
+      <DependentUpon>Resources.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_GlobalResources\lang_LIST.resx">
+      <DependentUpon>Resources.tt</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_LIST.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_GlobalResources\lang_LIST.vi-VN.resx">
+      <DependentUpon>Resources.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_GlobalResources\lang_WHS.resx">
+      <DependentUpon>Resources.tt</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>lang_WHS.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_GlobalResources\lang_WHS.vi-VN.resx">
+      <DependentUpon>Resources.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512201438134_v001.resx">
+      <DependentUpon>201512201438134_v001.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

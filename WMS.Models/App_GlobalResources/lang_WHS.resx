@@ -1,0 +1,2251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  	<data name="ASN_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Total_Receipted_Qty" xml:space="preserve">
+    <value>Total Receipted Qty</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Total_Expected_Qty" xml:space="preserve">
+    <value>Total Expected Qty</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Schedule_receipt_date" xml:space="preserve">
+    <value>Schedule_receipt_date</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Actual_receipt_date" xml:space="preserve">
+    <value>Actual Receipt Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Date_created" xml:space="preserve">
+    <value>Date Created</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Expected_weight" xml:space="preserve">
+    <value>Expected Weight</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Expected_cube" xml:space="preserve">
+    <value>Expected Cube</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_External_receipt" xml:space="preserve">
+    <value>PO ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_External_receipt_StringLength" xml:space="preserve">
+    <value>Length of PO ID should be between 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Supplier_ID" xml:space="preserve">
+    <value>Supplier ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Carrier_ID" xml:space="preserve">
+    <value>Carrier ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Warehouse_ID" xml:space="preserve">
+    <value>Warehouse ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Warehouse_ID_StringLength" xml:space="preserve">
+    <value>Length of Warehouse ID should be between 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_GRN_No" xml:space="preserve">
+    <value>GRN No</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Date_time_print_GRN" xml:space="preserve">
+    <value>Date Time Print GRN</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_ASN_Detail_ID" xml:space="preserve">
+    <value>ASN Detail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Line_No" xml:space="preserve">
+    <value>Line No</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ASN_ID" xml:space="preserve">
+    <value>ASN ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Receipt_Line_No" xml:space="preserve">
+    <value>Receipt Line No</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Total_quantity" xml:space="preserve">
+    <value>Total Quantity</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ASN_Code" xml:space="preserve">
+    <value>ASN Code</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ASN_Code_StringLength" xml:space="preserve">
+    <value>Length of ASN Code should be between 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Note" xml:space="preserve">
+    <value>Note</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Note_StringLength" xml:space="preserve">
+    <value>Length of Note should be between 2000</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_User_ID" xml:space="preserve">
+    <value>User ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ID_StringLength" xml:space="preserve">
+    <value>Length of ID should be between 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_Adjustment_number_ID" xml:space="preserve">
+    <value>Adjustment Number ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_Adjustment_number_ID_StringLength" xml:space="preserve">
+    <value>Length of Adjustment Number ID should be between 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ASN_ID" xml:space="preserve">
+    <value>ASN ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_Effective_date" xml:space="preserve">
+    <value>Effective Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_ASN_Detail_ID" xml:space="preserve">
+    <value>ASN Detail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_Adjustment_Qty" xml:space="preserve">
+    <value>Adjustment Qty</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_Receipt_reversal_ID" xml:space="preserve">
+    <value>Receipt Reversal ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Item_ID" xml:space="preserve">
+    <value>Item ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Pack_ID" xml:space="preserve">
+    <value>Pack ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Location_ID" xml:space="preserve">
+    <value>Location ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_1" xml:space="preserve">
+    <value>Lotable 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_1_StringLength" xml:space="preserve">
+    <value>Length of Lotable 1 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_2" xml:space="preserve">
+    <value>Lotable 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_2_StringLength" xml:space="preserve">
+    <value>Length of Lotable 2 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_3" xml:space="preserve">
+    <value>Lotable 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_4" xml:space="preserve">
+    <value>Lotable 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_11" xml:space="preserve">
+    <value>Lotable 11</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_12" xml:space="preserve">
+    <value>Lotable 12</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_5" xml:space="preserve">
+    <value>Lotable 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_5_StringLength" xml:space="preserve">
+    <value>Length of Lotable 5 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_6" xml:space="preserve">
+    <value>Lotable 6</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_6_StringLength" xml:space="preserve">
+    <value>Length of Lotable 6 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_10" xml:space="preserve">
+    <value>Lotable 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ReceiptStatus_ID" xml:space="preserve">
+    <value>ReceiptStatus ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Expected_Qty" xml:space="preserve">
+    <value>Expected Qty</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Received_Qty" xml:space="preserve">
+    <value>Received_Qty</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_1" xml:space="preserve">
+    <value>User Define 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_1_StringLength" xml:space="preserve">
+    <value>Length of User Define 1 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_2" xml:space="preserve">
+    <value>User Define 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_2_StringLength" xml:space="preserve">
+    <value>Length of User Define 2 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_3" xml:space="preserve">
+    <value>User Define 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_3_StringLength" xml:space="preserve">
+    <value>Length of User Define 3 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_4" xml:space="preserve">
+    <value>User Define 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_4_StringLength" xml:space="preserve">
+    <value>Length of User Define 4 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_5" xml:space="preserve">
+    <value>User Define 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_5_StringLength" xml:space="preserve">
+    <value>Length of User Define 5 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Notes" xml:space="preserve">
+    <value>Notes</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Notes_StringLength" xml:space="preserve">
+    <value>Length of Notes should be between 2000</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Discrepancy_Qty" xml:space="preserve">
+    <value>Discrepancy Qty</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_C_System_HoldCode_ID" xml:space="preserve">
+    <value>C System HoldCode ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_PO_Code" xml:space="preserve">
+    <value>PO Code</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_PO_Code_StringLength" xml:space="preserve">
+    <value>Length of PO Code should be between 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_Owner_ID" xml:space="preserve">
+    <value>Owner ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_Supplier_ID" xml:space="preserve">
+    <value>Supplier ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_C_System_POStatus_ID" xml:space="preserve">
+    <value>C System POStatus ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_PO_date" xml:space="preserve">
+    <value>PO Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_Expected_receipt_date" xml:space="preserve">
+    <value>Expected Receipt Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_Total_Order_Qty" xml:space="preserve">
+    <value>Total Order Qty</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_Notes" xml:space="preserve">
+    <value>Notes</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_Notes_StringLength" xml:space="preserve">
+    <value>Length of Notes should be between 2000</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_PO_ID" xml:space="preserve">
+    <value>PO ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_PO_ID_Required" xml:space="preserve">
+    <value>PO ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Order_Line_No" xml:space="preserve">
+    <value>Order Line No</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Order_Line_No_Required" xml:space="preserve">
+    <value>Order Line No is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Item_ID" xml:space="preserve">
+    <value>Item ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Item_ID_Required" xml:space="preserve">
+    <value>Item ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Oder_Line_No" xml:space="preserve">
+    <value>Oder Line No</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_C_System_POStatus_ID" xml:space="preserve">
+    <value>C System PO Status ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Notes" xml:space="preserve">
+    <value>Notes</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Notes_StringLength" xml:space="preserve">
+    <value>Length of Notes should be between 2000</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_1" xml:space="preserve">
+    <value>UDF 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_1_StringLength" xml:space="preserve">
+    <value>Length of UDF 1 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_2" xml:space="preserve">
+    <value>UDF 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_2_StringLength" xml:space="preserve">
+    <value>Length of UDF 2 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_3" xml:space="preserve">
+    <value>UDF 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_3_StringLength" xml:space="preserve">
+    <value>Length of UDF 3 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_4" xml:space="preserve">
+    <value>UDF 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_4_StringLength" xml:space="preserve">
+    <value>Length of UDF 4 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_5" xml:space="preserve">
+    <value>UDF 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_5_StringLength" xml:space="preserve">
+    <value>Length of UDF 5 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Pallet_Label" xml:space="preserve">
+    <value>Pallet Label</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Pallet_Label_StringLength" xml:space="preserve">
+    <value>Length of Pallet Label should be between 200</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_IsDeleted" xml:space="preserve">
+    <value>IsDeleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_IsDeleted" xml:space="preserve">
+    <value>IsDeleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_IsDeleted" xml:space="preserve">
+    <value>IsDeleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_IsDeleted" xml:space="preserve">
+    <value>IsDeleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Created_By" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Created_By_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Created_Date" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_IsDeleted" xml:space="preserve">
+    <value>IsDeleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Zone_Code" xml:space="preserve">
+    <value>Zone Code</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Zone_Code_StringLength" xml:space="preserve">
+    <value>Length of Zone Code should be between 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Description" xml:space="preserve">
+    <value>Description</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Description_StringLength" xml:space="preserve">
+    <value>Length of Description should be between 200</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_ReplenishmentlevelDetail_ID" xml:space="preserve">
+    <value>Replenishment LevelDetail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Location_ID" xml:space="preserve">
+    <value>Location ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Max_Pallets_per_item" xml:space="preserve">
+    <value>Max Pallets per Item</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_IsDeleted" xml:space="preserve">
+    <value>IsDeleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Maximum_Cube" xml:space="preserve">
+    <value>Maximum Cube</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Maximum_Weight" xml:space="preserve">
+    <value>Maximum Weight</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Maximum_Case_Count" xml:space="preserve">
+    <value>Maximum Case Count</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Max_Pick_Line" xml:space="preserve">
+    <value>Max Pick Line</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Max_Pick_Container" xml:space="preserve">
+    <value>Max Pick Container</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_IsDeleted" xml:space="preserve">
+    <value>IsDeleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_PositiveValidationMethod_ID" xml:space="preserve">
+    <value>Positive Validation Method ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Replenishment_MethodDetail_ID" xml:space="preserve">
+    <value>Replenishment MethodDetail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Location_Code" xml:space="preserve">
+    <value>Location Code</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Location_Code_StringLength" xml:space="preserve">
+    <value>Length of Location Code should be between 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Location_Type_ID" xml:space="preserve">
+    <value>Location Type ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Location_Type_ID_Required" xml:space="preserve">
+    <value>Location Type ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Zone_ID" xml:space="preserve">
+    <value>Zone ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Flag_ID" xml:space="preserve">
+    <value>Flag ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Category_ID" xml:space="preserve">
+    <value>Category ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Cominglelots" xml:space="preserve">
+    <value>Cominglelots</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Comingleitems" xml:space="preserve">
+    <value>Comingleitems</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Cubic_Capacity" xml:space="preserve">
+    <value>Cubic Capacity</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Status" xml:space="preserve">
+    <value>Status</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Status_StringLength" xml:space="preserve">
+    <value>Length of Status should be between 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_C_System_MovingspeedDetail_ID" xml:space="preserve">
+    <value>C System MovingspeedDetail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Height" xml:space="preserve">
+    <value>Height</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Length" xml:space="preserve">
+    <value>Length</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Width" xml:space="preserve">
+    <value>Width</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Level" xml:space="preserve">
+    <value>Level</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_X_coordinate" xml:space="preserve">
+    <value>X Coordinate</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Y_coordinate" xml:space="preserve">
+    <value>Y Coordinate</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Z_coordinate" xml:space="preserve">
+    <value>Z Coordinate</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Orientation" xml:space="preserve">
+    <value>Orientation</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Weight_Capacity" xml:space="preserve">
+    <value>Weight Capacity</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Stack_Limit" xml:space="preserve">
+    <value>Stack Limit</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_LocationhandlingDetail_ID" xml:space="preserve">
+    <value>LocationhandlingDetail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Foot_Print" xml:space="preserve">
+    <value>Foot Print</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UOM_ID" xml:space="preserve">
+    <value>UnitofMeasure ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_UOM_ID" xml:space="preserve">
+    <value>UOM ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Location_StatusDetail_ID" xml:space="preserve">
+    <value>Location StatusDetail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Movingspeed_ID" xml:space="preserve">
+    <value>Movingspeed ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ReceiptStatus_ID" xml:space="preserve">
+    <value>ReceiptStatus ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_ReceiptStatus_ID" xml:space="preserve">
+    <value>ReceiptStatus ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_ReceiptStatus_ID" xml:space="preserve">
+    <value>ReceiptStatus ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Name" xml:space="preserve">
+    <value>Name</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Name_Required" xml:space="preserve">
+    <value>Name is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Name_StringLength" xml:space="preserve">
+    <value>Length of Name should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Description" xml:space="preserve">
+    <value>Description</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Description_StringLength" xml:space="preserve">
+    <value>Length of Description should be between 200</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_step" xml:space="preserve">
+    <value>step</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_step_Required" xml:space="preserve">
+    <value>step is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Puttaway_Type_ID" xml:space="preserve">
+    <value>Puttaway Type ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_zone_ID" xml:space="preserve">
+    <value>Zone ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_from_location" xml:space="preserve">
+    <value>From Location</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_to_location" xml:space="preserve">
+    <value>To Location</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Demention_Restriction_1" xml:space="preserve">
+    <value>Demention Restriction 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Demention_Restriction_2" xml:space="preserve">
+    <value>Demention Restriction 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Demention_Restriction_3" xml:space="preserve">
+    <value>Demention Restriction 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Demention_Restriction_4" xml:space="preserve">
+    <value>Demention Restriction 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Demention_Restriction_5" xml:space="preserve">
+    <value>Demention Restriction 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Multi_Pallet" xml:space="preserve">
+    <value>Multi Pallet</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_check_restriction" xml:space="preserve">
+    <value>Check Restriction</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_area_restriction_1" xml:space="preserve">
+    <value>Area Restriction 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_area_restriction_2" xml:space="preserve">
+    <value>Area Restriction 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_area_restriction_3" xml:space="preserve">
+    <value>Area Restriction 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_putaway_strategy_ID" xml:space="preserve">
+    <value>Putaway Strategy ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_putaway_strategy_ID_Required" xml:space="preserve">
+    <value>Putaway Strategy ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_LPN" xml:space="preserve">
+    <value>LPN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Barcode_Format" xml:space="preserve">
+    <value>LPN Barcode Format</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Barcode_Format_Required" xml:space="preserve">
+    <value>LPN Barcode Format is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Length" xml:space="preserve">
+    <value>LPN_Length</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Length_Required" xml:space="preserve">
+    <value>LPN_Length is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Start_Number" xml:space="preserve">
+    <value>LPN Start Number</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Next_Number" xml:space="preserve">
+    <value>LPN Next Number</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Next_Number_Required" xml:space="preserve">
+    <value>LPN Next Number is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_Roll_Back_Number" xml:space="preserve">
+    <value>Roll Back Number</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_Roll_Back_Number_Required" xml:space="preserve">
+    <value>Roll Back Number is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_Case_Label_Type" xml:space="preserve">
+    <value>Case Label Type</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_Owner_ID" xml:space="preserve">
+    <value>Owner_ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_SO_Code" xml:space="preserve">
+    <value>SO Code</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_SO_Code_StringLength" xml:space="preserve">
+    <value>Length of SO Code should be between 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Owner_ID" xml:space="preserve">
+    <value>Owner ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Owner_ID_Required" xml:space="preserve">
+    <value>Owner ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_OutboundstatusID" xml:space="preserve">
+    <value>Outbound Status ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Priority_ID" xml:space="preserve">
+    <value>Priority ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Type_ID" xml:space="preserve">
+    <value>Type ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Type_ID_Required" xml:space="preserve">
+    <value>Type ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Customer_ID" xml:space="preserve">
+    <value>Customer ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Total_Quantity" xml:space="preserve">
+    <value>Total Quantity</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Order_Date" xml:space="preserve">
+    <value>Order Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Requested_Ship_Date" xml:space="preserve">
+    <value>Requested Ship Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Actual_Ship_Date" xml:space="preserve">
+    <value>Actual Ship Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Carrier_ID" xml:space="preserve">
+    <value>Carrier ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Driver_Name" xml:space="preserve">
+    <value>Driver Name</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Driver_Name_StringLength" xml:space="preserve">
+    <value>Length of Driver Name should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Truck_Number" xml:space="preserve">
+    <value>Truck Number</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Truck_Number_StringLength" xml:space="preserve">
+    <value>Length of Truck Number should be between 20</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Remark" xml:space="preserve">
+    <value>Remark</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Remark_StringLength" xml:space="preserve">
+    <value>Length of Remark should be between 2000</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_IsDelete" xml:space="preserve">
+    <value>Is Delete</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_IsDelete" xml:space="preserve">
+    <value>Is Delete</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_SO_ID" xml:space="preserve">
+    <value>SO ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_SO_Line_No" xml:space="preserve">
+    <value>SO Line No</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_SO_Line_No_Required" xml:space="preserve">
+    <value>SO Line No is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Item_ID" xml:space="preserve">
+    <value>Item ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Item_ID_Required" xml:space="preserve">
+    <value>Item ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Pack_ID" xml:space="preserve">
+    <value>Pack ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Pack_ID_Required" xml:space="preserve">
+    <value>Pack ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Order_Quantity" xml:space="preserve">
+    <value>Order Quantity</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Order_Quantity_Required" xml:space="preserve">
+    <value>Order Quantity is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Quantity" xml:space="preserve">
+    <value>Quantity</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Quantity_Required" xml:space="preserve">
+    <value>Quantity is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Allocated_Quantity" xml:space="preserve">
+    <value>Allocated Quantity</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Picked_Quantity" xml:space="preserve">
+    <value>Picked Quantity</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Picked_Quantity_Required" xml:space="preserve">
+    <value>Picked Quantity is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Shipped_Quantity" xml:space="preserve">
+    <value>Shipped Quantity</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_SO_Detail_ID" xml:space="preserve">
+    <value>SO Detail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_Lot_Attribute_ID" xml:space="preserve">
+    <value>Lot Attribute ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_Location_ID" xml:space="preserve">
+    <value>Location ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_PickStatus_ID" xml:space="preserve">
+    <value>Pick Status ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_Picking_Line_No" xml:space="preserve">
+    <value>Picking Line No</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_Item_ID" xml:space="preserve">
+    <value>Item ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_Quantity" xml:space="preserve">
+    <value>Quantity</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_Pack_ID" xml:space="preserve">
+    <value>Pack ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_Warehouse_ID" xml:space="preserve">
+    <value>Warehouse ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_SO_Detail_ID" xml:space="preserve">
+    <value>SO Detail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_Note" xml:space="preserve">
+    <value>Note</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_Note_StringLength" xml:space="preserve">
+    <value>Length of Note should be between 2000</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_Printed_Date" xml:space="preserve">
+    <value>Printed Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_SO_Detail_ID" xml:space="preserve">
+    <value>SO Detail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Packing_List_Note_No" xml:space="preserve">
+    <value>Packing List Note No</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Batch_Note" xml:space="preserve">
+    <value>Batch Note</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Batch_Note_StringLength" xml:space="preserve">
+    <value>Length of Batch Note should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Lot_No_Note" xml:space="preserve">
+    <value>Lot No Note</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Lot_No_Note_StringLength" xml:space="preserve">
+    <value>Length of Lot No Note should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_M3_Note" xml:space="preserve">
+    <value>M3 Note</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Kg_Note" xml:space="preserve">
+    <value>Kg Note</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Pack_Note" xml:space="preserve">
+    <value>Pack Note</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Pack_Note_StringLength" xml:space="preserve">
+    <value>Length of Pack Note should be between 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Qty_Note" xml:space="preserve">
+    <value>Qty Note</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_Item_ID" xml:space="preserve">
+    <value>Item ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_Activity_ID" xml:space="preserve">
+    <value>Activity ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_User_Add" xml:space="preserve">
+    <value>User Add</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_Edit_Date" xml:space="preserve">
+    <value>Edit Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_Add_Date" xml:space="preserve">
+    <value>Add Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_ModifiedDate" xml:space="preserve">
+    <value>Modify Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Item_ID" xml:space="preserve">
+    <value>Item ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Location_ID" xml:space="preserve">
+    <value>Location ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Status" xml:space="preserve">
+    <value>Status</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Quantity" xml:space="preserve">
+    <value>Quantity</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Quantity_Allocated" xml:space="preserve">
+    <value>Quantity Allocated</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Quantity_Available" xml:space="preserve">
+    <value>Quantity Available</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_LPN" xml:space="preserve">
+    <value>LPN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_LPN_StringLength" xml:space="preserve">
+    <value>Length of LPN should be between 20</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_To_Location" xml:space="preserve">
+    <value>To Location</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_To_Location_StringLength" xml:space="preserve">
+    <value>Length of To Location should be between 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Quantity_To_Move" xml:space="preserve">
+    <value>Quantity To Move</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_Lot_ID" xml:space="preserve">
+    <value>Lot ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_Item_ID" xml:space="preserve">
+    <value>Item ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_Location_ID" xml:space="preserve">
+    <value>Location ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_Holdreason_ID" xml:space="preserve">
+    <value>Holdreason ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_Date_On" xml:space="preserve">
+    <value>Date On</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_Date_Off" xml:space="preserve">
+    <value>Date Off</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_User_ID" xml:space="preserve">
+    <value>User ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Owner_ID" xml:space="preserve">
+    <value>Owner ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Adjustment_Date" xml:space="preserve">
+    <value>Adjustment Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_User_ID" xml:space="preserve">
+    <value>User ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_Line" xml:space="preserve">
+    <value>Line</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_ASN_Detail_ID" xml:space="preserve">
+    <value>ASN Detail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_Pack_ID" xml:space="preserve">
+    <value>Pack ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_AdjustmentReasonID" xml:space="preserve">
+    <value>Adjustment Reason ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_Adjustment_Quantity" xml:space="preserve">
+    <value>Adjustment Quantity</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_Target_Quantity" xml:space="preserve">
+    <value>Target Quantity</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_Current_Quantity" xml:space="preserve">
+    <value>Current Quantity</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_Adjustment_ID" xml:space="preserve">
+    <value>Adjustment ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Item_ID" xml:space="preserve">
+    <value>Item ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Owner_ID" xml:space="preserve">
+    <value>Owner ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_1" xml:space="preserve">
+    <value>Lottable 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_1_StringLength" xml:space="preserve">
+    <value>Length of Lottable 1 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_2" xml:space="preserve">
+    <value>Lottable 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_2_StringLength" xml:space="preserve">
+    <value>Length of Lottable 2 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_3" xml:space="preserve">
+    <value>Lottable 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_4" xml:space="preserve">
+    <value>Lottable 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_5" xml:space="preserve">
+    <value>Lottable 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_5_StringLength" xml:space="preserve">
+    <value>Length of Lottable 5 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_6" xml:space="preserve">
+    <value>Lottable 6</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_6_StringLength" xml:space="preserve">
+    <value>Length of Lottable 6 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_11" xml:space="preserve">
+    <value>Lottable 11</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_12" xml:space="preserve">
+    <value>Lottable 12</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_7" xml:space="preserve">
+    <value>Lottable 7</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_7_StringLength" xml:space="preserve">
+    <value>Length of Lottable 7 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_8" xml:space="preserve">
+    <value>Lottable 8</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_8_StringLength" xml:space="preserve">
+    <value>Length of Lottable 8 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_9" xml:space="preserve">
+    <value>Lottable 9</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_9_StringLength" xml:space="preserve">
+    <value>Length of Lottable 9 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_10" xml:space="preserve">
+    <value>Lottable 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_10_StringLength" xml:space="preserve">
+    <value>Length of Lottable 10 should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_ASN_Detail_ID" xml:space="preserve">
+    <value>ASN Detail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_Item_ID" xml:space="preserve">
+    <value>Item ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_ASN_Receipt_ID" xml:space="preserve">
+    <value>ASN Receipt ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_Input_Qty" xml:space="preserve">
+    <value>Input Qty</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_User_Update" xml:space="preserve">
+    <value>User Update</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_CreateDate" xml:space="preserve">
+    <value>Create Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Note" xml:space="preserve">
+    <value>Note</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_To_LPN" xml:space="preserve">
+    <value>To_LPN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_LPN_New" xml:space="preserve">
+    <value>LPN New</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_LPN_New_Required" xml:space="preserve">
+    <value>LPN New is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_ASN_Detail_ID" xml:space="preserve">
+    <value>ASN Detail ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_ModifiedBy" xml:space="preserve">
+    <value>Modified By</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Length of Modified By should be between 50</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_ModifiedDate" xml:space="preserve">
+    <value>Modified Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_IsDeleted" xml:space="preserve">
+    <value>Is Deleted</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_ID" xml:space="preserve">
+    <value>ID</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_CreatedBy_StringLength" xml:space="preserve">
+    <value>Length of Created By should be between 100</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_ID_Required" xml:space="preserve">
+    <value>ID is required</value>
+	<comment></comment>
+	  </data>
+    
+</root>
+
+	

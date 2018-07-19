@@ -1,0 +1,2803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  	<data name="Owner_Company" xml:space="preserve">
+    <value>Công ty</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Company_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Công ty trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_City" xml:space="preserve">
+    <value>Thành phố</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Address_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Địa chỉ trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Email1" xml:space="preserve">
+    <value>Email 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Email1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email 1 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Email2" xml:space="preserve">
+    <value>Email 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Email2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email 2 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Fax1" xml:space="preserve">
+    <value>Fax 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Fax1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Fax2" xml:space="preserve">
+    <value>Fax 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Fax2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Phone1" xml:space="preserve">
+    <value>Điện thoại 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Phone1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Phone2" xml:space="preserve">
+    <value>Điện thoại 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Phone2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Address" xml:space="preserve">
+    <value>Địa chỉ thanh toán</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Address_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Địa chỉ thanh toán trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_City" xml:space="preserve">
+    <value>Thành phố thanh toán</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_District" xml:space="preserve">
+    <value>Quận thanh toán</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Email1" xml:space="preserve">
+    <value>Email thanh toán 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Email1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email thanh toán 1 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Email2" xml:space="preserve">
+    <value>Email thanh toán 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Email2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email thanh toán 2 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Phone1" xml:space="preserve">
+    <value>Điện thoại thanh toán 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Phone1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại thanh toán 1 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Phone2" xml:space="preserve">
+    <value>Điện thoại thanh toán 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Phone2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại thanh toán 2 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Fax1" xml:space="preserve">
+    <value>Fax thanh toán 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Fax1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax thanh toán 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Fax2" xml:space="preserve">
+    <value>Fax thanh toán 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Billing_Fax2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax thanh toán 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Notes" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Notes_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Carrier_Code" xml:space="preserve">
+    <value>Code nhà vận chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Carrier_Code_Required" xml:space="preserve">
+    <value>Vui lòng nhập Code nhà vận chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Company" xml:space="preserve">
+    <value>Công ty</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Company_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Công ty trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_City" xml:space="preserve">
+    <value>Thành phố</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_District" xml:space="preserve">
+    <value>Quận</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Address_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Địa chỉ trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Email1" xml:space="preserve">
+    <value>Email 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Email1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email 1 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Email2" xml:space="preserve">
+    <value>Email 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Email2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email 2 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Phone1" xml:space="preserve">
+    <value>Điện thoại 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Phone1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Phone2" xml:space="preserve">
+    <value>Điện thoại 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Phone2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Fax1" xml:space="preserve">
+    <value>Fax 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Fax1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Fax2" xml:space="preserve">
+    <value>Fax 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Fax2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Address" xml:space="preserve">
+    <value>Địa chỉ thanh toán</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Address_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Địa chỉ thanh toán trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_City" xml:space="preserve">
+    <value>Thành phố thanh toán</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_District" xml:space="preserve">
+    <value>Quận/Huyện thanh toán</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Email1" xml:space="preserve">
+    <value>Email thanh toán 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Email1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email thanh toán 1 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Email2" xml:space="preserve">
+    <value>Email thanh toán 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Email2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email thanh toán 2 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Phone1" xml:space="preserve">
+    <value>Điện thoại thanh toán 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Phone1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại thanh toán 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Phone2" xml:space="preserve">
+    <value>Điện thoại thanh toán 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Phone2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại thanh toán 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Fax1" xml:space="preserve">
+    <value>Fax thanh toán 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Fax1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax thanh toán 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Fax2" xml:space="preserve">
+    <value>Fax thanh toán 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Billing_Fax2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax thanh toán 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Notes" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Notes_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_UDF_1" xml:space="preserve">
+    <value>Người dùng định nghĩa 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_UDF_1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 1 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_UDF_2" xml:space="preserve">
+    <value>Người dùng định nghĩa 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_UDF_2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 2 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_UDF_3" xml:space="preserve">
+    <value>Người dùng định nghĩa 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_UDF_3_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 3 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_UDF_4" xml:space="preserve">
+    <value>Người dùng định nghĩa 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_UDF_4_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 4 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_UDF_5" xml:space="preserve">
+    <value>Người dùng định nghĩa 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_UDF_5_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 5 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_Owner_ID" xml:space="preserve">
+    <value>Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Customer_Code" xml:space="preserve">
+    <value>Code khách hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Customer_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code khách hàng trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Company" xml:space="preserve">
+    <value>Công ty</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Company_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Công ty trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_City" xml:space="preserve">
+    <value>Thành phố</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_District" xml:space="preserve">
+    <value>Quận</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Address_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Địa chỉ trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Email1" xml:space="preserve">
+    <value>Email 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Email1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email 1 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Email2" xml:space="preserve">
+    <value>Email 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Email2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email 2 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Phone1" xml:space="preserve">
+    <value>Điện thoại 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Phone1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Phone2" xml:space="preserve">
+    <value>Điện thoại 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Phone2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Fax1" xml:space="preserve">
+    <value>Fax 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Fax1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Fax2" xml:space="preserve">
+    <value>Fax 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Fax2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Address" xml:space="preserve">
+    <value>Địa chỉ thanh toán</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Address_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Địa chỉ thanh toán trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_City" xml:space="preserve">
+    <value>Thành phố thanh toán</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_City_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Thành phố thanh toán trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_District" xml:space="preserve">
+    <value>Quận/Huyện thanh toán</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_District_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Quận/Huyện thanh toán trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Email1" xml:space="preserve">
+    <value>Email thanh toán 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Email1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email thanh toán 1 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Email2" xml:space="preserve">
+    <value>Email thanh toán 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Email2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email thanh toán 2 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Phone1" xml:space="preserve">
+    <value>Điện thoại thanh toán 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Phone1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại thanh toán 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Phone2" xml:space="preserve">
+    <value>Điện thoại thanh toán 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Phone2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại thanh toán 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Fax1" xml:space="preserve">
+    <value>Fax thanh toán 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Fax1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax thanh toán 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Fax2" xml:space="preserve">
+    <value>Fax thanh toán 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Billing_Fax2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax thanh toán 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Notes" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Notes_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_UDF_1" xml:space="preserve">
+    <value>Người dùng định nghĩa 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_UDF_1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 1 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_UDF_2" xml:space="preserve">
+    <value>Người dùng định nghĩa 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_UDF_2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 2 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_UDF_3" xml:space="preserve">
+    <value>Người dùng định nghĩa 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_UDF_3_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 3 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_UDF_4" xml:space="preserve">
+    <value>Người dùng định nghĩa 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_UDF_4_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 4 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_UDF_5" xml:space="preserve">
+    <value>Người dùng định nghĩa 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_UDF_5_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 5 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_Owner_ID" xml:space="preserve">
+    <value>Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Pack_Code" xml:space="preserve">
+    <value>Code đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Pack_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code đóng gói trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Description" xml:space="preserve">
+    <value>Mô tả</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Description_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mô tả</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Supplier_Code" xml:space="preserve">
+    <value>Code nhà cung cấp</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Supplier_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code nhà cung cấp trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Company" xml:space="preserve">
+    <value>Công ty</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Company_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Công ty trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_City" xml:space="preserve">
+    <value>Thành phố</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Master_Unit_Length" xml:space="preserve">
+    <value>Chiều dài đơn vị chính</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_District" xml:space="preserve">
+    <value>Quận</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Address_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Địa chỉ trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Email1" xml:space="preserve">
+    <value>Email 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Email1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email 1 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Email2" xml:space="preserve">
+    <value>Email 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Email2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email 2 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Master_Unit_Width" xml:space="preserve">
+    <value>Chiều rộng đơn vị chính</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Phone1" xml:space="preserve">
+    <value>Điện thoại 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Phone1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Phone2" xml:space="preserve">
+    <value>Điện thoại 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Phone2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Master_Unit_Height" xml:space="preserve">
+    <value>Chiều cao đơn vị chính</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Fax1" xml:space="preserve">
+    <value>Fax 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Fax1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Fax2" xml:space="preserve">
+    <value>Fax 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Fax2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Address" xml:space="preserve">
+    <value>Địa chỉ thanh toán</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Address_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Địa chỉ thanh toán trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Case_Length" xml:space="preserve">
+    <value>Chiều dài Case</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_City" xml:space="preserve">
+    <value>Thành phố thanh toán</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Case_Width" xml:space="preserve">
+    <value>Chiều rộng Case</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_District" xml:space="preserve">
+    <value>Quận/Huyện thanh toán</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Email1" xml:space="preserve">
+    <value>Email thanh toán 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Email1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email thanh toán 1 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Case_Height" xml:space="preserve">
+    <value>Chiều cao Case</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Email2" xml:space="preserve">
+    <value>Email thanh toán 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Email2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Email thanh toán 2 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Phone1" xml:space="preserve">
+    <value>Điện thoại thanh toán 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Phone1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại thanh toán 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Innerpack_Length" xml:space="preserve">
+    <value>Chiều dài Innerpack</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Phone2" xml:space="preserve">
+    <value>Điện thoại thanh toán 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Phone2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Điện thoại thanh toán 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Innerpack_Width" xml:space="preserve">
+    <value>Chiều rộng Innerpack</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Fax1" xml:space="preserve">
+    <value>Fax thanh toán 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Fax1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax thanh toán 1 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Fax2" xml:space="preserve">
+    <value>Fax thanh toán 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Billing_Fax2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Fax thanh toán 2 trong khoảng 30 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Notes" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Notes_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Innerpack_Height" xml:space="preserve">
+    <value>Chiều cao Innerpack</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_UDF_1" xml:space="preserve">
+    <value>Người dùng định nghĩa 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_UDF_1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 1 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_UDF_2" xml:space="preserve">
+    <value>Người dùng định nghĩa 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_UDF_2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 2 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_UDF_3" xml:space="preserve">
+    <value>Người dùng định nghĩa 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_UDF_3_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 3 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Pallet_Length" xml:space="preserve">
+    <value>Chiều dài pallet</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_UDF_4" xml:space="preserve">
+    <value>Người dùng định nghĩa 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_UDF_4_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 4 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Pallet_Width" xml:space="preserve">
+    <value>Chiều rộng pallet</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Pallet_Height" xml:space="preserve">
+    <value>Chiều cao pallet</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_UDF_5" xml:space="preserve">
+    <value>Người dùng định nghĩa 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_UDF_5_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 5 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Owner_ID" xml:space="preserve">
+    <value>Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Pallet_Wood_Length" xml:space="preserve">
+    <value>Chiều dài pallet gỗ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Pallet_Wood_Width" xml:space="preserve">
+    <value>Chiều rộng pallet gỗ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Pallet_Wood_Height" xml:space="preserve">
+    <value>Chiều rộng pallet gỗ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Number_of_cases_per_tier" xml:space="preserve">
+    <value>Số lượng case trong một lớp </value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Owner_Code" xml:space="preserve">
+    <value>Code chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Owner_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code chủ sở hữu trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Number_of_tiers_high_per_pallet" xml:space="preserve">
+    <value>Số lượng lớp cao trên một pallet</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Layer_Lenght" xml:space="preserve">
+    <value>Chiều dài lớp</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_District" xml:space="preserve">
+    <value>Quận</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_District_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Quận trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Layer_Width" xml:space="preserve">
+    <value>Chiều rộng lớp</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Layer_Height" xml:space="preserve">
+    <value>Chiều cao lớp</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_UDF_1" xml:space="preserve">
+    <value>Người dùng định nghĩa 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_UDF_1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 1 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_UDF_2" xml:space="preserve">
+    <value>Người dùng định nghĩa 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_UDF_2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 2 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Item_Code" xml:space="preserve">
+    <value>Code hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Item_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code hàng trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_UDF_3" xml:space="preserve">
+    <value>Người dùng định nghĩa 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_UDF_3_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 3 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_UDF_4" xml:space="preserve">
+    <value>Người dùng định nghĩa 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_UDF_4_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 4 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Item_Description" xml:space="preserve">
+    <value>Mô tả hàng </value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Item_Description_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mô tả hàng  trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_UDF_5" xml:space="preserve">
+    <value>Người dùng định nghĩa 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_UDF_5_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 5 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Customer_ID" xml:space="preserve">
+    <value>Mã khách hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Supplier_ID" xml:space="preserve">
+    <value>Mã nhà cung cấp</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Carrier_ID" xml:space="preserve">
+    <value>Mã nhà vận chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Cartonization_ID" xml:space="preserve">
+    <value>Mã Cartonization</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Owner_Id" xml:space="preserve">
+    <value>Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Allocation_Strategy_ID" xml:space="preserve">
+    <value>Mã chiến lược chỉ định vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Putaway_Strategy_ID" xml:space="preserve">
+    <value>Mã chiến lược nhập hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Pack_Id" xml:space="preserve">
+    <value>Mã đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Carton_ID" xml:space="preserve">
+    <value>Mã Carton</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Allocation_Strategy_Id" xml:space="preserve">
+    <value>Mã chiến lược chỉ định vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Putaway_Strategy_Id" xml:space="preserve">
+    <value>Mã chiến lược xếp hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Zone_Id" xml:space="preserve">
+    <value>Mã vùng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_To_Expire_Days" xml:space="preserve">
+    <value>Số ngày hết hạn còn lại</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_To_Deliver_By_Days" xml:space="preserve">
+    <value>Số ngày vận chuyển còn lại</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_To_Best_By_Day" xml:space="preserve">
+    <value>Số ngày vận chuyển tốt nhất còn lại</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Cube" xml:space="preserve">
+    <value>Số khối</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Gross_weight" xml:space="preserve">
+    <value>Trọng lượng cả bì</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Net_weight" xml:space="preserve">
+    <value>Trọng lượng tịnh</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Tare_weight" xml:space="preserve">
+    <value>Trọng lượng bao bì</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Carton_ID" xml:space="preserve">
+    <value>Mã carton</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_UOM_QuantityDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết số lượng UOM</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Batch_No" xml:space="preserve">
+    <value>Số Batch</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Lot_No" xml:space="preserve">
+    <value>Số Lot</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Code_UOM_ID" xml:space="preserve">
+    <value>Mã Code đơn vị đo lường</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_C_System_Itemtype" xml:space="preserve">
+    <value>Loại hàng hệ thống</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Location_ID" xml:space="preserve">
+    <value>Mã vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_RotationDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết luân chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_RotatebyDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết luân chuyển bởi</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_UDF_1" xml:space="preserve">
+    <value>Người dùng định nghĩa 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_UDF_1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 1 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Notes" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Notes_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_V_Receipt_ID" xml:space="preserve">
+    <value>Mã xác nhận đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_V_Lot_ID" xml:space="preserve">
+    <value>Mã xác nhận Lot</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_CycleClass_ID" xml:space="preserve">
+    <value>Mã lớp kiểm kê</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_V_CycleCount_ID" xml:space="preserve">
+    <value>Mã kiểm kê</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_Last_cycle_count" xml:space="preserve">
+    <value>Lần kiểm kê cuối</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_UDF_2" xml:space="preserve">
+    <value>Người dùng định nghĩa 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_UDF_2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 2 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_UDF_3" xml:space="preserve">
+    <value>Người dùng định nghĩa 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_UDF_3_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 3 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_UDF_4" xml:space="preserve">
+    <value>Người dùng định nghĩa 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_UDF_4_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 4 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_UDF_5" xml:space="preserve">
+    <value>Người dùng định nghĩa 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_UDF_5_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 5 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_Owner_Code" xml:space="preserve">
+    <value>Code chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_Owner_Code_Required" xml:space="preserve">
+    <value>Vui lòng nhập Code chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_Owner_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code chủ sở hữu trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_Item_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_Component_ID" xml:space="preserve">
+    <value>Mã thành phần</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_Component_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã thành phần</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_Quantity" xml:space="preserve">
+    <value>Số lượng</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_Sequence" xml:space="preserve">
+    <value>Trình tự</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_Notes" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_Notes_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_ID" xml:space="preserve">
+    <value>Mã BOM</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Cartonization_Code" xml:space="preserve">
+    <value>Code Carton</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Cartonization_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code Carton trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Carton_Group" xml:space="preserve">
+    <value>Nhóm Carton</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Carton_Group_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Nhóm Carton trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Carton_Type" xml:space="preserve">
+    <value>Loại Carton</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Carton_Type_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Loại Carton trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Sequence" xml:space="preserve">
+    <value>Trình tự</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Description" xml:space="preserve">
+    <value>Mô tả</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Description_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mô tả trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Maximum_Unit" xml:space="preserve">
+    <value>Tổng số tối đa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Maximum_Weight" xml:space="preserve">
+    <value>Trọng lượng tối đa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Cube" xml:space="preserve">
+    <value>Số khối</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Container_Type" xml:space="preserve">
+    <value>Loại Container</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Container_Type_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Loại Container trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Length" xml:space="preserve">
+    <value>Chiều dài</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Width" xml:space="preserve">
+    <value>Bề dày</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Height" xml:space="preserve">
+    <value>Chiều cao</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_Tare_Weight" xml:space="preserve">
+    <value>Trọng lượng bao bì</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_ModifiedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_ItemtypeDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết loại hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_UOM_PackageDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết gói UOM</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_UOM_WeightDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết trọng lượng UOM</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_UOM_CubeDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết khối UOM</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_ID" xml:space="preserve">
+    <value>Mã xác nhận đơn hàng nhận</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_V_Receipt_code" xml:space="preserve">
+    <value>Code xác nhận đơn hàng nhận</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_V_Receipt_code_Required" xml:space="preserve">
+    <value>Vui lòng nhập Code xác nhận đơn hàng nhận</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_V_Receipt_code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code xác nhận đơn hàng nhận trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_Default" xml:space="preserve">
+    <value>Mặc định</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_ID" xml:space="preserve">
+    <value>Mã xác nhận kiểm kê</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_ID" xml:space="preserve">
+    <value>Mã kiểm kê</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Receipt_without_PO" xml:space="preserve">
+    <value>Receipt without PO</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Receipt_without_PO_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Receipt without PO trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_Cycle_Count_Discrepancy_Template" xml:space="preserve">
+    <value>Mẫu kiểm kê chênh lệch</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_Cycle_Count_Discrepancy_Template_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mẫu kiểm kê chênh lệch trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_Description" xml:space="preserve">
+    <value>Mô tả</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_Description_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mô tả trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_Cycle_Class_Code" xml:space="preserve">
+    <value>Code kiểm kê</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_Cycle_Class_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code kiểm kê trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_Description" xml:space="preserve">
+    <value>Mô tả</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_Description_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mô tả trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_Positive_adjustment_lot" xml:space="preserve">
+    <value>Lot điều chỉnh tăng</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_Positive_adjustment_lot_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lot điều chỉnh tăng trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_Days" xml:space="preserve">
+    <value>Số ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_Days_Range" xml:space="preserve">
+    <value>Số ngày chỉ trong khoảng http://db.wms.3ps.vn/#.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_Percent_Positive_Variance" xml:space="preserve">
+    <value>Biến % tăng</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_Percent_Negative_Variance" xml:space="preserve">
+    <value>Biến % giảm</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_Positive_adjustment_lottable3" xml:space="preserve">
+    <value>Lottable điều chỉnh tăng 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_Positive_adjustment_lottable3_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lottable điều chỉnh tăng 3 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_Value_Positive_Variance" xml:space="preserve">
+    <value>Biến giá trị tăng</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_Value_Negative_Variance" xml:space="preserve">
+    <value>Biến giá trị giảm</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_Positive_adjustment_lottable4" xml:space="preserve">
+    <value>Lottable điều chỉnh tăng 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_Positive_adjustment_lottable4_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lottable điều chỉnh tăng 4 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Receipt_without_LPN" xml:space="preserve">
+    <value>Receipt without LPN </value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Receipt_without_LPN_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Receipt without LPN  trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_Negative_adjustment_lot" xml:space="preserve">
+    <value>Lot điều chỉnh giảm</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_Negative_adjustment_lot_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lot điều chỉnh giảm trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_Negative_adjustment_lottable3" xml:space="preserve">
+    <value>Lottable điều chỉnh giảm 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_Negative_adjustment_lottable3_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lottable điều chỉnh giảm 3 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Item_not_on_PO" xml:space="preserve">
+    <value>Hàng không có trong PO</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Item_not_on_PO_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Hàng không có trong PO trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_Negative_adjustment_lottable4" xml:space="preserve">
+    <value>Lottable điều chỉnh giảm 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_Negative_adjustment_lottable4_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lottable điều chỉnh giảm 4 trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_LottableAdjustmentRule_ID" xml:space="preserve">
+    <value>Mã luật điều chỉnh Lottable </value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết xác nhận kiểm kê</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_V_CycleCount_ID" xml:space="preserve">
+    <value>Mã xác nhận kiểm kê</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Receipt_Without_ASN" xml:space="preserve">
+    <value>Đơn hàng nhận không có ASN</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Receipt_Without_ASN_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Đơn hàng nhận không có ASN trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_V_Date_format_code" xml:space="preserve">
+    <value>Code định dạng ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_V_Date_format_code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code định dạng ngày trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_Description" xml:space="preserve">
+    <value>Mô tả</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_Description_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mô tả trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Item_Not_on_ASN" xml:space="preserve">
+    <value>Hàng không có trong ASN</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Item_Not_on_ASN_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Hàng không có trong ASN trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_Converts_to" xml:space="preserve">
+    <value>Chuyển đổi thành</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_Example" xml:space="preserve">
+    <value>Ví dụ</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_Example_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ví dụ trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_Date_element" xml:space="preserve">
+    <value>Thành phần ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_Date_element_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Thành phần ngày trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_Begin" xml:space="preserve">
+    <value>Bắt đầu</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_End" xml:space="preserve">
+    <value>Kết thúc</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_Field_type" xml:space="preserve">
+    <value>Loại trường</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_Date_type" xml:space="preserve">
+    <value>Loại ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_How_to_process" xml:space="preserve">
+    <value>Cách thức xử lý</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_How_to_process_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Cách thức xử lý trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết định dạng ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_V_date_format_ID" xml:space="preserve">
+    <value>Mã định dạng ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_Code_Date_element_ID" xml:space="preserve">
+    <value>Mã thành phần Code ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_Code_Date_type_ID" xml:space="preserve">
+    <value>Mã loại Code ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_Code_how_to_process_ID" xml:space="preserve">
+    <value>Mã Code cách thức xử lý</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_Code_date_field_ID" xml:space="preserve">
+    <value>Mã trường Code ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_Outbound_validation_code" xml:space="preserve">
+    <value>Code xác nhận xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_Outbound_validation_code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code xác nhận xuất trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_Type" xml:space="preserve">
+    <value>Loại</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_Type_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Loại trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_Customer_ID" xml:space="preserve">
+    <value>Mã khách hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Allow_error_ID" xml:space="preserve">
+    <value>Mã lỗi cho phép</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_Owner_ID" xml:space="preserve">
+    <value>Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_ID" xml:space="preserve">
+    <value>Mã xác nhận bổ sung</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Perform_Qty_Validation" xml:space="preserve">
+    <value>Thực hiện xác nhận SL</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Overage_Message" xml:space="preserve">
+    <value>Tin thông báo vượt SL</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết xác nhận xuất hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_Outbound_validation_ID" xml:space="preserve">
+    <value>Mã xác nhận xuất hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_Minimum_shelf_life" xml:space="preserve">
+    <value>Số ngày hết hạn tối thiểu</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_Sequence" xml:space="preserve">
+    <value>Trình tự</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_Sequence_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Trình tự trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Overage_Override" xml:space="preserve">
+    <value>Ghi đè thông báo vượt SL</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_Validation_routine" xml:space="preserve">
+    <value>Xác nhận hàng ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_Validation_routine_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Xác nhận hàng ngày trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Overage_Hard_Error" xml:space="preserve">
+    <value>Overage Hard Error</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_Enable" xml:space="preserve">
+    <value>Kích hoạt</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_ID" xml:space="preserve">
+    <value>Mã xác nhận Lot</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_RF_directed_picking" xml:space="preserve">
+    <value>Lấy hàng trực tiếp bằng máy RF</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_Lottable_Validation_Key" xml:space="preserve">
+    <value>Khóa xác nhận lottable</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_Lottable_Validation_Key_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Khóa xác nhận lottable trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_RF_assisted_picking" xml:space="preserve">
+    <value>Hỗ trợ lấy hàng bằng máy RF</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_Description" xml:space="preserve">
+    <value>Mô tả</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_Description_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mô tả trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_V_Lot_ID" xml:space="preserve">
+    <value>Mã xác nhận Lot</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_Code_Validation_routine_ID" xml:space="preserve">
+    <value>Mã Code xác nhận hàng ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_Lottable_name" xml:space="preserve">
+    <value>Tên Lottable</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_Lottable_name_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Tên Lottable trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_Visible" xml:space="preserve">
+    <value>Được thấy</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_Required" xml:space="preserve">
+    <value>Được yêu cầu</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_GenerateMask" xml:space="preserve">
+    <value>Generate Mask</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_GenerateMask_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Generate Mask trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_MaximumLength" xml:space="preserve">
+    <value>Chiều dài tối đa</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_ID" xml:space="preserve">
+    <value>Mã xác nhận chi tiết lottable</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết xác nhận chi tiết lottable </value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_Lottable_Validation_detail_ID" xml:space="preserve">
+    <value>Mã chi tiết xác nhận lottable</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_ShelfLifeValidation" xml:space="preserve">
+    <value>Xác nhận hết hạn</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_DateCodeFormat" xml:space="preserve">
+    <value>Code định dạng ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_DateCodeFormat_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code định dạng ngày trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_Conversion" xml:space="preserve">
+    <value>Chuyển đổi</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_Conversion_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Chuyển đổi trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_Sequence" xml:space="preserve">
+    <value>Trình tự</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_Lottable_conversion_ID" xml:space="preserve">
+    <value>Mã chuyển đổi lottable</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_V_Date_fortmat_ID" xml:space="preserve">
+    <value>Mã xác nhận định dạng ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo </value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_Created_By" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_Created_By_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_Created_Date" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_ID" xml:space="preserve">
+    <value>Mã nhà vận chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_ID" xml:space="preserve">
+    <value>Mã khách hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_ID" xml:space="preserve">
+    <value>Mã nhà cung cấp</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_ID" xml:space="preserve">
+    <value>Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_ID" xml:space="preserve">
+    <value>Mã đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_ID" xml:space="preserve">
+    <value>Mã cartonization</value>
+	<comment></comment>
+	  </data>
+  	<data name="Cartonization_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã cartonization</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết xác nhận đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_Lottable_Validation_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết xác nhận lottable</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_ID" xml:space="preserve">
+    <value>Mã định dạng ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_Conditional_Validation_ID" xml:space="preserve">
+    <value>Mã điều kiện xác nhận</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_IsDelete" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_ID" xml:space="preserve">
+    <value>Mã đơn hàng tổng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_Wave_Code" xml:space="preserve">
+    <value>Code đơn hàng tổng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_Wave_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code đơn hàng tổng trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_Description" xml:space="preserve">
+    <value>Mô tả</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_Description_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mô tả trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_User_ID" xml:space="preserve">
+    <value>Mã người dùng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_Create_On" xml:space="preserve">
+    <value>Ngày tạo đơn hàng tổng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_Wave_Status_ID" xml:space="preserve">
+    <value>Mã trạng thái đơn hàng tổng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_SO_ID" xml:space="preserve">
+    <value>Mã đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_ID" xml:space="preserve">
+    <value>Mã ghi chú vận chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_SO_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_Warehouse_ID" xml:space="preserve">
+    <value>Mã kho</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_Printed_Date" xml:space="preserve">
+    <value>Ngày in</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_Note" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_Note_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Rotation_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết luân chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Rotation_Detail_By" xml:space="preserve">
+    <value>Chi tiết luân chuyển bởi</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Receipt_Validation_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết xác nhận đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Cycle_Class_ID" xml:space="preserve">
+    <value>Mã lớp kiểm kê</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_V_Cycle_Count_ID" xml:space="preserve">
+    <value>Mã kiểm kê</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Unit_Per_Mesure_1" xml:space="preserve">
+    <value></value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Unit_Per_Mesure_2" xml:space="preserve">
+    <value></value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Unit_Per_Mesure_3" xml:space="preserve">
+    <value></value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Unit_Per_Mesure_4" xml:space="preserve">
+    <value></value>
+	<comment></comment>
+	  </data>
+  	<data name="User_ID" xml:space="preserve">
+    <value>Mã người dùng</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_Name" xml:space="preserve">
+    <value>Tên</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_Name_Required" xml:space="preserve">
+    <value>Vui lòng nhập Tên</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_Full_Name" xml:space="preserve">
+    <value>Họ tên</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_Full_Name_Required" xml:space="preserve">
+    <value>Vui lòng nhập Họ tên</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_Password_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mật khẩu</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_Encrypt" xml:space="preserve">
+    <value>Mã hóa</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_Encrypt_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã hóa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_ID" xml:space="preserve">
+    <value>Mã kho</value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_Name" xml:space="preserve">
+    <value>Tên</value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_Name_Required" xml:space="preserve">
+    <value>Vui lòng nhập Tên</value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_Description" xml:space="preserve">
+    <value>Mô tả</value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_Server" xml:space="preserve">
+    <value>Server</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Cartonize_Pallet" xml:space="preserve">
+    <value></value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Cartonize_innerPack" xml:space="preserve">
+    <value></value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Cartonize_Case" xml:space="preserve">
+    <value></value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Cartonize_MasterUnit" xml:space="preserve">
+    <value></value>
+	<comment></comment>
+	  </data>
+  	<data name="Pack_Cartonize_Layer" xml:space="preserve">
+    <value></value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="BOM_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã BOM</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidation_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã xác nhận đơn hàng nhận</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidation_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã xác nhận kiểm kê</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleClass_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã kiểm kê</value>
+	<comment></comment>
+	  </data>
+  	<data name="CycleCountValidationDetail_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã chi tiết xác nhận kiểm kê</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormatDetail_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã chi tiết định dạng ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidation_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã xác nhận bổ sung</value>
+	<comment></comment>
+	  </data>
+  	<data name="OutboundValidationDetail_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã chi tiết xác nhận xuất hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidation_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã xác nhận Lot</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetail_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã xác nhận chi tiết lottable</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã chi tiết xác nhận chi tiết lottable </value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="LottableValidationDetailDetail_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Carrier_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã nhà vận chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="Customer_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã khách hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Supplier_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã nhà cung cấp</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="Item_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptValidationDetail_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã chi tiết xác nhận đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="V_DateFormat_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã định dạng ngày</value>
+	<comment></comment>
+	  </data>
+  	<data name="Wave_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã đơn hàng tổng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Delivery_Note_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã ghi chú vận chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="User_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã người dùng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Warehouse_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã kho</value>
+	<comment></comment>
+	  </data>
+    
+</root>
+
+	

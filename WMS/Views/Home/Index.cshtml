@@ -1,0 +1,235 @@
+﻿<div class="row" id="div_Grid">
+    <div style="width:100%">
+        <h2 style="text-align:center"><a href="#"> Inbound / ASN / Receipt</a> </h2>
+    </div>
+    <div>
+        <ul>
+            <li style="float: left; padding-right: 8px;"><button type="button" class="btn btn-default" id="btnNew">New </button></li>
+            <li style="float: left; padding-right: 8px;"><button type="button" class="btn btn-default" id="btnSave">Save </button></li>
+            <li style="float: left; padding-right: 8px;"><button type="button" class="btn btn-default" id="btnDelete">Delete </button></li>
+            <li style="float: left; padding-right: 8px;"><button type="button" class="btn btn-default" id="btnPrint">Print Label </button></li>
+            <li style="float: left; padding-right: 8px;"><button type="button" class="btn btn-default" id="btnGoodReceipt">Good Receipt Note </button></li>
+            <li style="float: left; padding-right: 8px;"><button type="button" class="btn btn-default" id="btnExportExcel">Export to Excel </button></li>
+        </ul>
+    </div>
+    <br />
+    <br />
+    <div id="ASNReceipt_Grid"></div>
+</div>
+<div id="div_New" class="row toshow">
+    <div style="width:100%">
+        <div class="row leftside" style="margin-top:10px;">
+            <button id="btnBack" type="button" class="btn btn-primary" style="margin-bottom:10px;"><span class="fa fa-arrow-left"></span></button>
+            <span style="color:blue;font-size:small">Inbound / ASN/Receipt / General</span>
+        </div>
+        <div class="row" style="float:right;">
+            <button type="button" class="btn btn-default">Import Excel</button>
+            <button type="button" class="btn btn-default">Populate from PO</button>
+            <button type="button" class="btn btn-default">Save</button>
+        </div>
+        <div class="row">
+            <div class="container">
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="active">
+                        <a href="#general" role="tab" data-toggle="tab">General</a>
+                    </li>
+                    <li>
+                        <a href="#more" role="tab" data-toggle="tab">More Information</a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="general">
+                        <ul class="fieldlist">
+                            <li style="margin-left:-40px;">
+                                <label>ASN/Receipt ID: *</label>
+                                <input id="simple-input" type="text" class="k-textbox input-width" />
+                            </li>
+                            <li>
+                                <label>Owner: *</label>
+                                <input type="text" class="k-textbox input-width" />
+                            </li>
+                            <li>
+                                <label>Scheduled Ship Date:</label>
+                                <input class="k-textbox input-width" />
+                            </li>
+                            <li>
+                                <label>Expected Weight:</label>
+                                <input type="text" class="k-textbox input-width" />
+                            </li>
+                            <li style="margin-left: -40px;">
+                                <label>Status:</label>
+                                <input type="text" class="k-textbox input-width" />
+                            </li>
+                            <li>
+                                <label>Total Received Qty:</label>
+                                <input type="text" class="k-textbox input-width" />
+                            </li>
+                            <li>
+                                <label>Actual Ship Date:</label>
+                                <input class="k-textbox input-width" />
+                            </li>
+                            <li>
+                                <label>Expected Cube:</label>
+                                <input type="text" class="k-textbox input-width" />
+                            </li>
+                            <li style="margin-left:-40px;">
+                                <label>Type: *</label>
+                                <input type="text" class="k-textbox input-width" />
+                            </li>
+                            <li>
+                                <label>Total Expected Qty:</label>
+                                <input type="text" class="k-textbox input-width" />
+                            </li>
+                            <li>
+                                <label for="simple-input">Date Created:</label>
+                                <input class="k-textbox input-width" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="more">
+                        <h2>Profile Content Goes Here</h2>
+                        <img src="http://lorempixel.com/400/400/cats/2" alt="Cats" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row leftside" style="margin-bottom:10px;">
+            <div style="float:left;">
+                <button type="button" class="btn btn-default">Duplicate</button>
+                <button type="button" class="btn btn-default">Explode</button>
+            </div>
+            <div style="float:right;">
+                <button type="button" class="btn btn-default">Palletization</button>
+                <button type="button" class="btn btn-default">Unpalletization</button>
+                <button type="button" class="btn btn-default">Receive All</button>
+                <button type="button" class="btn btn-default">Good Receipt Note</button>
+                <button type="button" class="btn btn-default">Generate Putaway</button>
+                <button type="button" class="btn btn-default">Pallet Label</button>
+                <button type="button" class="btn btn-default">Close ASN</button>
+            </div>
+        </div>
+        <div class="row leftside" id="grid_Line">
+        </div>
+    </div>
+</div>
+<script>
+
+    var dataSource = new kendo.data.DataSource({
+        serverPaging: true,
+        serverFiltering: true,
+        serverSorting: true,
+        pageSize: 10,
+        transport: {
+            read: {
+                url: 'http://localhost:3866/api/ASNreceipt',
+                contentType: "application/json",
+                type: "GET",
+            },
+        },
+        batch: false,
+        schema: {
+            model: {
+                id: "ASNReceiptID",
+                fields: {
+                    Ma: { type: "string" },
+                    TinhTrang: { type: "date" },
+                    Loai: { type: "number" },
+                    NgayShipDukien: { type: "date" },
+                    NgayShipThucTe: { type: "date" },
+                    SoLuongNhan: { type: "number" },
+                    SoLuongDat: { type: "number" },
+                    KhoiLuongDat: { type: "number" },
+                    SoKhoiDat: { type: "number" },
+                    NgayTao: { type: "date" },
+                    MaNhaCungCap: { type: "string" },
+                    MaNhaVanChuyen: { type: "boolean" },
+                    MaXe: { type: "string" },
+                    MoTa1: { type: "string" },
+                    MoTa2: { type: "boolean" },
+                    MoTa3: { type: "string" },
+                }
+            }
+        },
+
+    });
+
+    $("#ASNReceipt_Grid").kendoGrid({
+        dataSource: dataSource,
+        pageable: true,
+        filterable: {
+            mode: "row",
+        },
+        height: 400,
+        columns: [
+            { field: "MANV", title: "ASN/Receipt ID" },
+            { field: "CODE", title: "Owner" },
+            { field: "TEN", title: "External Receipt" },
+            { field: "HINH", title: "Status" },
+            { field: "BIRTHDAY", title: "Type" },
+            { field: "MANV", title: "Carrier Code" },
+            { field: "CODE", title: "Carrier Reference" },
+            { field: "TEN", title: "Warehouse Reference" },
+            { field: "HINH", title: "Expected Receipt Date" },
+            { field: "BIRTHDAY", title: "Date Close" },
+        ],
+    });
+    // grid Line
+    $("#grid_Line").kendoGrid({
+        dataSource: dataSource,
+        pageable: true,
+        filterable: {
+            mode: "row",
+        },
+        height: 400,
+        columns: [
+            { field: "MANV", title: "ASN/Receipt ID" },
+            { field: "CODE", title: "Owner" },
+            { field: "TEN", title: "External Receipt" },
+            { field: "HINH", title: "Status" },
+            { field: "BIRTHDAY", title: "Type" },
+            { field: "MANV", title: "Carrier Code" },
+            { field: "CODE", title: "Carrier Reference" },
+            { field: "TEN", title: "Warehouse Reference" },
+            { field: "HINH", title: "Expected Receipt Date" },
+            { field: "BIRTHDAY", title: "Date Close" },
+        ],
+    });
+    //end grid line
+    $("#btnNew").click(function () {
+        $('#div_Grid').hide();
+        $('#div_New').show();
+    })
+    $("#btnBack").click(function () {
+        $('#div_Grid').show();
+        $('#div_New').hide();
+    })
+</script>
+<style>
+    .toshow {
+        display: none;
+    }
+
+    .fieldlist label {
+        display: block;
+        padding-top: 8px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #444;
+    }
+
+    .fieldlist li {
+        margin-left: 80px;
+        float: left;
+    }
+
+    .leftside {
+        margin-left: 5px;
+    }
+
+    .input-width {
+        width: 225px;
+    }
+</style>

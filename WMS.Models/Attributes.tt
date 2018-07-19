@@ -1,0 +1,926 @@
+﻿<#@ template language="C#" debug="true" hostspecific="true"#>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ output extension=".cs"#>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.CodeDom.Compiler" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Data.OleDb" #>
+<#@ import namespace="System.Data.SqlClient" #> 
+<#@ import namespace="System.Collections.Generic" #>
+
+<#@ Assembly name="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll" #>
+<#
+try
+{
+	fileManager = EntityFrameworkTemplateFileManager.Create(this);
+	templateDirectory = Path.GetDirectoryName(Host.TemplateFile);
+	string inputDirectory = templateDirectory;
+	DataSet ds = new DataSet();
+	string connectionString =
+                   @"Data Source=3ps.vn;Initial Catalog=db_wms_3ps_vn_v2;User ID=wms_v2; Password=3ps123";
+
+	using (SqlConnection conn = new SqlConnection(connectionString))
+	{
+		string sql = string.Format("SELECT field.* from dbo.Tables as tbl INNER JOIN dbo.Fields as field on tbl.ID = field.TableID WHERE tbl.Module IS NOT NULL AND tbl.IDDatabase =2 ORDER BY Module, ModelName, Field");
+		var command = new SqlCommand(sql, conn);
+        var adapterModule = new SqlDataAdapter(command);
+		
+		conn.Open();
+        adapterModule.Fill(ds);
+		conn.Close();
+	}
+		 
+	
+    var data = ds.Tables[0].AsEnumerable();
+		List<cfield> rows = data.Where(x=>x.Field<object>("ID") !=null && x.Field<object>("Field") !=null).Select(x =>
+		new cfield
+		{
+			ID				= x.Field<object>("ID") ==null ? ""				: x.Field<object>("ID").ToString(),
+			TableID			= x.Field<object>("TableID") ==null ? ""	: x.Field<object>("TableID").ToString(),
+			Module			= x.Field<object>("Module") ==null ? ""			: x.Field<object>("Module").ToString(),
+			DBTable			= x.Field<object>("DBTable") ==null ? ""		: x.Field<object>("DBTable").ToString(),
+			DBField			= x.Field<object>("DBField") ==null ? ""		: x.Field<object>("DBField").ToString(),
+			DBSize			= x.Field<object>("DBSize") ==null ? ""			: x.Field<object>("DBSize").ToString(),
+			IsPrimaryKey	= (x.Field<object>("IsPrimaryKey") ==null ? ""	: x.Field<object>("IsPrimaryKey").ToString().ToLower())=="true",
+			IsForeignKey	= (x.Field<object>("IsForeignKey") ==null ? ""	: x.Field<object>("IsForeignKey").ToString().ToLower())=="true",
+			ForeignTable	= x.Field<object>("ForeignTable") ==null ? ""	: x.Field<object>("ForeignTable").ToString(),
+			ForeignTableID	= x.Field<object>("ForeignTableID") ==null ? ""	: x.Field<object>("ForeignTableID").ToString(),
+			ModelName		= x.Field<object>("ModelName") ==null ? ""		: x.Field<object>("ModelName").ToString(),
+			Field			= x.Field<object>("Field") ==null ? ""			: x.Field<object>("Field").ToString(),
+			ResxEN			= x.Field<object>("ResxEN") ==null ? ""			: x.Field<object>("ResxEN").ToString(),
+			ResxVN			= x.Field<object>("ResxVN") ==null ? ""			: x.Field<object>("ResxVN").ToString(),
+			DataType		= x.Field<object>("DataType") ==null ? ""		: x.Field<object>("DataType").ToString().ToLower(),
+			IsRequired		= (x.Field<object>("Required") ==null ? ""		: x.Field<object>("Required").ToString().ToLower())=="true",
+			Expression		= x.Field<object>("Expression") ==null ? ""		: x.Field<object>("Expression").ToString(),
+			Range			= x.Field<object>("Range") ==null ? ""			: x.Field<object>("Range").ToString(),
+			StringLength	= x.Field<object>("StringLength") ==null ? ""	: x.Field<object>("StringLength").ToString(),
+			RemoteName		= x.Field<object>("RemoteName") ==null ? ""		: x.Field<object>("RemoteName").ToString(),
+			RemoteAdditionalFields	= x.Field<object>("RemoteAdditionalFields") ==null ? ""	: x.Field<object>("RemoteAdditionalFields").ToString(),
+			Description     = x.Field<object>("Description") ==null ? ""	: x.Field<object>("Description").ToString(),
+			UpdatedBy		= x.Field<object>("UpdatedBy") ==null ? ""		: x.Field<object>("UpdatedBy").ToString(),
+			UpdatedDate     = x.Field<object>("UpdatedDate") ==null ? ""	: x.Field<object>("UpdatedDate").ToString(),
+		}).ToList();
+        
+		var ModelNameList = rows.Select(o => new { o.Module, o.ModelName, o.DBTable, o.TableID }).Distinct().ToList();
+		List<cfield> lstDBSet = new List<cfield>();
+		foreach(var mn in ModelNameList)
+		{
+			cfield item = new cfield();
+			item.Module = zone = mn.Module;
+			item.ModelName = citemName = mn.ModelName;
+			tblID = mn.TableID;
+			if(!string.IsNullOrEmpty(mn.DBTable))
+			{
+				tblName = "[Table(\"tbl_" + zone + "_" + mn.DBTable + "\")]";
+			}
+			lstDBSet.Add(item);
+			//write files
+			writeFileContent(rows.Where(d=>d.Module == zone && d.ModelName == citemName).ToList(), rows.Where(d=>d.Module == zone && d.ModelName == citemName && d.IsForeignKey && d.ForeignTable != null).ToList(), rows.Where(d=>d.IsForeignKey && d.ForeignTableID == tblID).ToList());
+		}
+		writeContext(lstDBSet);
+		fileManager.Process();
+	
+}
+catch (Exception ex)
+{
+	this.Host.LogErrors(new CompilerErrorCollection() { new CompilerError("", 0, 0, "0",ex.Message) });
+}
+#>
+
+<#+
+public void writeContext(List<cfield> table)
+{
+    string outputFileName = string.Format("DBContext.cs");
+    string outputFilePath = Path.Combine(templateDirectory, outputFileName);
+    string beginkey = "//[begin coding block]";
+    string endkey = "//[end coding block]";
+    string codeNamespace = Host.ResolveParameterValue("directiveId", "namespaceDirectiveProcessor", "namespaceHint");
+
+	string oldFile = "";
+    string NotChangeContent = "";
+
+    if (System.IO.File.Exists(outputFilePath))
+        oldFile = System.IO.File.ReadAllText(outputFilePath);
+    
+    if (oldFile.Contains(beginkey) && oldFile.Contains(endkey))
+    {
+        int beginindex = oldFile.IndexOf(beginkey);
+        int endindex = oldFile.IndexOf(endkey) + endkey.Length;
+        NotChangeContent = oldFile.Substring(beginindex, endindex - beginindex);
+    }
+    else
+    {
+        NotChangeContent = @"//[begin coding block]//[end coding block]";
+    }
+	fileManager.StartNewFile(outputFilePath);
+	#>
+// file info -------------------------------------------------------------------
+//
+//    Copyright         : 3P Solutions
+//    Website           : 3PS.VN
+//
+//    Namespace         : <#=codeNamespace#>
+//
+//------------------------------------------------------------------------------
+
+#region using
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
+#endregion
+
+namespace <#=codeNamespace#>
+{
+    public class DBContext: DbContext
+    {
+        <#=NotChangeContent#>
+        <#+
+		foreach (var item in table)
+        {
+			string strItem = BuildDBSet(item, "\r        ");
+            #><#=strItem#><#+
+        }
+		#>
+		
+		public DBContext()
+        : base("DBConnectionString")
+		{
+
+		}
+
+		protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+
+		}
+    }
+}
+<#+
+}
+#>
+<#+
+public string BuildDBSet(cfield item, string space)
+{
+    string property = space + "public DbSet<{0}> {1} {{ get; set; }}";
+    property = string.Format(property, item.Module + "_" + item.ModelName,"DBSet_"+ item.Module + "_" + item.ModelName);
+    return property;
+}
+#>
+<#+
+public void writeFileContent(List<cfield> table, List<cfield> lstForeignKey, List<cfield> lstChild)
+{
+		
+    bool hasCode = false;
+    bool hasName = false;
+    bool hasIsDeleted = false;
+    bool hasProfileID = false;
+    string properties = "";
+    string outputFileName = string.Format("{0}_{1}.cs",zone,citemName);
+    string outputFilePath = Path.Combine(templateDirectory, outputFileName);
+    string beginkey = "//[begin coding block]";
+    string endkey = "//[end coding block]";
+	string beginkeyfunction= "//[begin coding function block]";
+    string endkeyfunction = "//[end coding function block]";
+    string codeNamespace = Host.ResolveParameterValue("directiveId", "namespaceDirectiveProcessor", "namespaceHint");
+	string className = string.Format("{0}_{1}",zone,citemName);
+	string DBSetclassName = string.Format("DBSet_{0}_{1}",zone,citemName);
+    if (table.Any())
+    {
+        foreach (var item in table){
+            if (item.Field=="Code")
+                hasCode = true;
+            if (item.Field=="Name")
+                hasName = true;
+            if (item.Field=="IsDeleted")
+                hasIsDeleted = true;
+            if (item.Field=="ProfileID")
+                hasProfileID = true;
+            properties += " "+ item.Field +";";
+        }
+    }
+   
+    string oldFile = "";
+    string NotChangeContent = "";
+	string NotChangeFunction = "";
+    if (System.IO.File.Exists(outputFilePath))
+        oldFile = System.IO.File.ReadAllText(outputFilePath);
+    
+    if (oldFile.Contains(beginkey) && oldFile.Contains(endkey))
+    {
+        int beginindex = oldFile.IndexOf(beginkey);
+        int endindex = oldFile.IndexOf(endkey) + endkey.Length;
+        NotChangeContent = oldFile.Substring(beginindex, endindex - beginindex);
+    }
+    else
+    {
+        NotChangeContent = @"//[begin coding block]//[end coding block]";
+    }
+
+	
+    
+    if (oldFile.Contains(beginkeyfunction) && oldFile.Contains(endkey))
+    {
+        int beginindex = oldFile.IndexOf(beginkeyfunction);
+        int endindex = oldFile.IndexOf(endkeyfunction) + endkeyfunction.Length;
+        NotChangeFunction = oldFile.Substring(beginindex, endindex - beginindex);
+    }
+    else
+    {
+        NotChangeFunction = @"//[begin coding function block]//[end coding function block]";
+    }
+
+    string pattern = @"public (.*) (.*) \{.*\}";
+    string notchangeProperties = "";
+    string outUpdateProperties = "";
+    Regex rgx = new Regex(pattern);
+
+    foreach (Match match in rgx.Matches(NotChangeContent))
+    {
+        string matchProperty = match.Groups[2].ToString();
+        notchangeProperties += " "+matchProperty + ";";
+        outUpdateProperties += properties.Contains(" "+ matchProperty + ";") ? "" : " "+matchProperty + ";";
+    }
+
+    string oldProperties = "";
+    foreach (Match match in rgx.Matches(oldFile))
+    {
+        string matchProperty = match.Groups[2].ToString();
+        oldProperties += " "+ matchProperty + ";";
+    }
+
+    string newProperties = "";
+    if (table.Any())
+    {
+        foreach (var item in table){
+            newProperties += oldProperties.Contains(" "+ item.Field +";") ? "" : " "+ item.Field +";";
+        }
+    }
+
+    if(!string.IsNullOrEmpty(notchangeProperties.Trim())){
+        CompilerError cwarning = new CompilerError( outputFilePath, 18, 20, "0","Not change properties: " + notchangeProperties);
+        cwarning.IsWarning=true;
+        this.Host.LogErrors(new CompilerErrorCollection() { cwarning });
+    }
+    if(!string.IsNullOrEmpty(outUpdateProperties.Trim())){
+        this.Host.LogErrors(new CompilerErrorCollection() { new CompilerError(outputFilePath, 21, 20, "0","Out update properties: " + outUpdateProperties) });
+    }
+    if(!string.IsNullOrEmpty(newProperties.Trim())){
+        CompilerError cwarning = new CompilerError( outputFilePath, 12, 26, "0","New properties: " + newProperties);
+        cwarning.IsWarning=true;
+        this.Host.LogErrors(new CompilerErrorCollection() { cwarning });		
+    }
+	fileManager.StartNewFile(outputFilePath);
+
+	#>
+// file info -------------------------------------------------------------------
+//
+//    Copyright         : 3P Solutions
+//    Website           : 3PS.VN
+//
+//    Namespace         : <#=codeNamespace#>
+//    Citem Name        : <#=citemName#>
+//    File Name         : <#=outputFileName#>
+//    Properties        :<#=properties#>
+//    Not Change        :<#=notchangeProperties#>
+//    Old Properties    :<#=oldProperties#>
+//    New Properties    :<#=newProperties#>
+//    Out Update        :<#=outUpdateProperties#>
+//
+//    Has Code          : <#=hasCode#>
+//    Has Name          : <#=hasName#>
+//    Has IsDeleted     : <#=hasIsDeleted#>
+//    Has ProfileID     : <#=hasProfileID#>
+//
+//------------------------------------------------------------------------------
+
+#region using
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
+using System.Web.Mvc;
+using System.Linq;
+using Kendo.Mvc.Extensions;
+using log4net;
+using WMSService;
+using Kendo.Mvc.UI;
+#endregion
+
+namespace <#=codeNamespace#>
+{
+	<#=tblName#>
+    [Serializable]
+	[DataContract]
+    public partial class <#=zone#>_<#=citemName#>
+    {
+        <#=NotChangeContent#>
+
+        #region properties
+		[NotMapped]
+		[DataMember]
+        public bool IsSelected { get; set; }
+		[NotMapped]
+		[DataMember]
+        public string TagStr { get; set; }
+        <#+
+		foreach (var item in table)
+        {
+            var tmpProperty = item.Field;			
+            if (!NotChangeContent.Contains(" "+tmpProperty +" "))
+            {
+				string strItem = BuildProperty(item, "\r        ");
+                #><#=strItem#>
+			<#+
+            }
+        }
+		#>
+		<#+
+		if(lstForeignKey.Count() > 0 || lstChild.Count() > 0)
+		{#>
+
+		#region Navigation properties for creating ForeignKey
+		<#+		
+		foreach (var item in lstForeignKey)
+        {
+				string strItem = BuildForeignKey(item,true, "\r        ");
+                #><#=strItem#><#+
+        }
+		#>
+		<#+
+		foreach (var item in lstChild)        {
+				
+				string strItem = BuildChildList(item,true, "\r        ");
+                #><#=strItem#><#+
+        }
+		#>
+
+
+		#endregion
+		<#+ } #>
+
+        #endregion
+    }
+
+
+
+
+
+	public partial class <#=zone#>
+    {	
+		<#=NotChangeFunction#>
+			<#+
+			if(zone !="SYS")
+				{	#>
+        #region QueryFunctions
+        public IEnumerable<<#=className#>> <#=className#>_Query(Kendo.Mvc.UI.DataSourceRequest request, out int Total)
+        {
+			try
+            {
+                WMS.Models.DBContext model = new DBContext();
+                var result = model.<#=DBSetclassName#>.AsEnumerable().Select(s => new <#=className#>()
+                {
+					IsSelected = false,
+					TagStr = s.TagStr,
+					<#+
+					foreach (var item in table)
+					{
+					var tmpProperty = item.Field;
+					string property = "{0} =s.{1},";
+						property = string.Format(property, item.Field, item.Field);
+					#>
+					<#=property#>
+					<#+
+					}        
+					#>               
+                })                
+                .ToDataSourceResult(request);
+                Total = result.Total;
+                return result.Data as IEnumerable<<#=className#>>;
+            }
+            catch (Exception ex)
+            {
+                Common.log.Error(ex.Message, ex);
+                Common.log.Info(string.Format("Function: {0} - [error message]: {1}", "IEnumerable<<#=className#>> <#=className#>_Query", ex.Message));
+                Total = 0;
+                return null;
+            }
+            
+        }
+
+
+		public DataSourceResult <#=className#>_Query(Kendo.Mvc.UI.DataSourceRequest request)
+        {
+			try
+            {
+                WMS.Models.DBContext model = new DBContext();
+                var result = model.<#=DBSetclassName#>.AsEnumerable().Select(s => new 
+                {
+					IsSelected = false,
+					TagStr = s.TagStr,
+					<#+
+					foreach (var item in table)
+					{
+					var tmpProperty = item.Field;
+					string property = "{0} =s.{1},";
+						property = string.Format(property, item.Field, item.Field);
+					#>
+					<#=property#>
+					<#+
+					}        
+					#>               
+                })                
+                .ToDataSourceResult(request);
+                
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Common.log.Error(ex.Message, ex);
+                Common.log.Info(string.Format("Function: {0} - [error message]: {1}", "DataSourceResult <#=className#>_Query", ex.Message));
+              
+                return null;
+            }
+            
+        }
+	
+
+		 public <#=className#> <#=className#>_GetByID(int ID)
+        {
+            WMS.Models.DBContext model = new DBContext();
+            return model.<#=DBSetclassName#>.Where(d => d.ID == ID).FirstOrDefault<<#=className#>>();
+        }
+       
+        #endregion
+		#region CRUD
+		#region Create
+        public DataSourceResult <#=className#>_Create(IEnumerable<<#=className#>> items, string CreatedBy)
+        {
+            string <#=className#>_List = string.Empty;
+            string <#=className#>_List_Serialized = string.Empty;
+            string <#=className#>_Items_Serialized = string.Empty;
+
+            string message = string.Empty;
+            List<<#=className#>> result = new List<<#=className#>>();
+            try
+            {
+                WMS.Models.DBContext model = new DBContext();
+                foreach (<#=className#> item in items)
+                {
+                    <#=className#> dbItem = new <#=className#>();
+
+                    item.CreatedBy = item.ModifiedBy = CreatedBy;
+                    item.CreatedDate = item.ModifiedDate = Common.getUTCDate();
+					dbItem.IsSelected = item.IsSelected;
+					dbItem.TagStr = item.TagStr;
+					<#+
+			foreach (var item in table)
+			{
+				var tmpProperty = item.Field;
+
+					string property = "dbItem.{0} =item.{1};";
+						property = string.Format(property, item.Field, item.Field);
+					#>
+			<#=property#>
+					<#+
+					}
+        
+					#>                   
+                    <#=className#>_Items_Serialized += Common.SerializeObject(item);  
+                    model.<#=DBSetclassName#>.Add(dbItem);
+                     Common.SaveChanges(model);
+
+                    item.ID = dbItem.ID;
+                    <#=className#>_List += "[" + item.ID + "] ";
+
+                    result.Add(item);
+                    <#=className#>_List_Serialized += Common.SerializeObject(item);
+                }
+				
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+                 Common.log.Error(<#=className#>_Items_Serialized, ex);
+            }
+            finally
+            {
+                if (!string.IsNullOrEmpty(message))
+                {
+                     Common.log.Warn(CreatedBy + " => " + <#=className#>_Items_Serialized, new Exception(message));
+                }
+                 Common.log.Info(string.Format("User: {0} - [end] - <#=className#>_Create: {1} - {2}", CreatedBy, <#=className#>_List, <#=className#>_List_Serialized));
+            }
+            return result.ToDataSourceResult(new DataSourceRequest ());
+        }
+		 public DataSourceResult <#=className#>_Create(<#=className#> item, string CreatedBy)
+        {
+            string <#=className#>_List = string.Empty;
+            string <#=className#>_List_Serialized = string.Empty;
+            string <#=className#>_Items_Serialized = string.Empty;
+
+            string message = string.Empty;
+            List<<#=className#>> result = new List<<#=className#>>();
+            try
+            {
+                WMS.Models.DBContext model = new DBContext();
+                
+                    <#=className#> dbItem = new <#=className#>();
+
+                    item.CreatedBy = item.ModifiedBy = CreatedBy;
+                    item.CreatedDate = item.ModifiedDate = Common.getUTCDate();
+					dbItem.IsSelected = item.IsSelected;
+					dbItem.TagStr = item.TagStr;
+					<#+
+			foreach (var item in table)
+			{
+				var tmpProperty = item.Field;
+
+					string property = "dbItem.{0} =item.{1};";
+						property = string.Format(property, item.Field, item.Field);
+					#>
+			<#=property#>
+					<#+
+					}
+        
+					#>
+                    <#=className#>_Items_Serialized += Common.SerializeObject(item);
+                    model.<#=DBSetclassName#>.Add(dbItem);
+                    Common.SaveChanges(model);
+
+                    item.ID = dbItem.ID;
+                    <#=className#>_List += "[" + item.ID + "] ";
+
+                    result.Add(item);
+                    <#=className#>_List_Serialized += Common.SerializeObject(item);
+                
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+                Common.log.Error(<#=className#>_Items_Serialized, ex);
+            }
+            finally
+            {
+                if (!string.IsNullOrEmpty(message))
+                {
+                    Common.log.Warn(CreatedBy + " => " + <#=className#>_Items_Serialized, new Exception(message));
+                }
+                Common.log.Info(string.Format("User: {0} - [end] - <#=className#>_Create: {1} - {2}", CreatedBy, <#=className#>_List, <#=className#>_List_Serialized));
+            }
+            return result.ToDataSourceResult(new DataSourceRequest ());
+        }
+		#endregion
+		 #region Read
+        public DataSourceResult <#=className#>_Read(Kendo.Mvc.UI.DataSourceRequest request)
+        {
+            try
+            {
+                WMS.Models.DBContext model = new DBContext();
+                var  result = model.<#=DBSetclassName#>.AsEnumerable().Select(s => new 
+                {
+                   IsSelected = false,
+					TagStr = s.TagStr,
+					<#+
+					foreach (var item in table)
+					{
+					var tmpProperty = item.Field;
+					string property = "{0} =s.{1},";
+						property = string.Format(property, item.Field, item.Field);
+					#>
+					<#=property#>
+					<#+
+					}
+        
+					#>
+                })               
+                .ToDataSourceResult(request);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Common.log.Error(ex.Message, ex);
+                Common.log.Info(string.Format("Function: {0} - [error message]: {1}", "MyDataSourceResult <#=className#>_Read", ex.Message));
+                return null;
+            }
+        }
+        #endregion
+		 #region Update
+        public bool <#=className#>_Update(IEnumerable<<#=className#>> items, string ModifiedBy)
+        {
+            string <#=className#>_List = string.Empty;
+            string <#=className#>_List_Serialized = string.Empty;
+            string <#=className#>_Items_Serialized = string.Empty;
+
+            string result = string.Empty;
+			bool flag = true;
+            try
+            {
+                WMS.Models.DBContext model = new DBContext();
+                foreach (<#=className#> item in items)
+                {
+                    <#=className#> dbItem = model.<#=DBSetclassName#>.Where(d => d.ID == item.ID).FirstOrDefault();
+                    if (dbItem != null)
+                    {
+                        <#=className#>_List += "[" + item.ID + "] ";
+                        item.ModifiedBy = ModifiedBy;
+                        item.ModifiedDate = Common.getUTCDate();
+                        if (item.CreatedDate == DateTime.MinValue)
+                            item.CreatedDate = dbItem.CreatedDate;
+							dbItem.IsSelected = item.IsSelected;
+							dbItem.TagStr = item.TagStr;
+                        	<#+
+			foreach (var item in table)
+			{
+				var tmpProperty = item.Field;
+
+					string property = "dbItem.{0} =item.{1};";
+						property = string.Format(property, item.Field, item.Field);
+					#>
+			<#=property#>
+					<#+
+					}
+        
+					#>
+                        
+
+                        <#=className#>_Items_Serialized += Common.SerializeObject(item);
+                        Common.SaveChanges(model);
+                        <#=className#>_List_Serialized += Common.SerializeObject(item);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+				flag = false;
+                result = ex.Message;
+                Common.log.Error(<#=className#>_Items_Serialized, ex);
+            }
+            finally
+            {
+                if (!string.IsNullOrEmpty(result))
+                {
+                    Common.log.Warn(ModifiedBy + " => " + <#=className#>_Items_Serialized, new Exception(result));
+                }
+                Common.log.Info(string.Format("User: {0} - [end] - <#=className#>_Update: {1} - {2}", ModifiedBy, <#=className#>_List, <#=className#>_List_Serialized));
+            }
+            return flag;
+        }
+        #endregion
+        #region Destroy
+        public string <#=className#>_Delete(IEnumerable<int> itemsID, string ModifiedBy)
+        {
+            string result = string.Empty;
+            string <#=className#>_List = string.Empty;
+            string <#=className#>_Items_Serialized = string.Empty;
+            try
+            {
+                WMS.Models.DBContext model = new DBContext();
+                List<<#=className#>> sendToTrashList = model.<#=DBSetclassName#>.Where(d => itemsID.Contains(d.ID)).ToList();
+                foreach (<#=className#> item in sendToTrashList)
+                {
+                    model.Entry(item).State = System.Data.Entity.EntityState.Deleted;
+
+                }
+                Common.SaveChanges(model);
+            }
+            catch (Exception ex)
+            {
+                result = ex.Message;
+                Common.log.Error(<#=className#>_Items_Serialized, ex);
+            }
+            finally
+            {
+                if (!string.IsNullOrEmpty(result))
+                {
+                    Common.log.Warn(ModifiedBy + " => " + <#=className#>_Items_Serialized, new Exception(result));
+                }
+                Common.log.Info(string.Format("User: {0} - [end] - <#=className#>_Destroy: {1}", ModifiedBy, <#=className#>_List));
+            }
+            return result;
+        }
+        #endregion
+		#endregion
+       <#+}#>
+    }
+	
+}
+	
+					
+				
+
+<#+
+}
+#>
+<#+
+public string BuildProperty(cfield item, string space)
+{
+    string summary = BuildSummary(item, space);
+    string attrib = BuildAttribute(item, space);
+    string property = space + "public {0} {1} {{ get; set; }}";
+    property = string.Format(property, getDataType(item), item.Field);
+
+    return summary + attrib + property;
+}
+public string BuildChildList(cfield item, bool isDuplicateModel, string space)
+{
+	
+		string property = space + "public virtual ICollection<{0}> {1} {{ get; set; }}";
+		property = string.Format(property, item.Module + "_" + item.ModelName, isDuplicateModel? (item.Module + "_" + item.ModelName + "s"+"_"+item.Field):item.Module + "_" + item.ModelName + "s");
+		return property;
+	
+}
+
+public string BuildForeignKey(cfield item, bool isDuplicateModel, string space)
+{
+	
+	if(item.ForeignTable.Equals(item.Module + "_" + item.ModelName))
+	{
+	
+		string ForeignKey = space + "[{0}]";
+			ForeignKey = string.Format(ForeignKey, "ForeignKey(\"" + item.Field + "\")");
+		string property1 = space + "public virtual {0} Parent {{ get; set; }}";
+		property1 = string.Format(property1, item.Module + "_" + item.ModelName);
+		return ForeignKey + property1;
+	}
+	else
+	{ 
+
+		
+			string ForeignKey = space + "[{0}]";
+			ForeignKey = string.Format(ForeignKey, "ForeignKey(\"" + item.Field + "\")");
+			string property = space + "public virtual {0} {1} {{ get; set; }}";
+			property = string.Format(property, item.ForeignTable, isDuplicateModel? (item.ForeignTable+"_"+item.Field):item.ForeignTable);
+			return ForeignKey + property;
+		
+	}
+}
+
+public string getDataType(cfield item)
+{
+    string result = "string";
+    switch (item.DataType)
+    {
+        case "int":
+            result = "int";
+            break;
+        case "string":
+            result = "string";
+            break;
+        case "datetime":
+            result = "DateTime"; 
+            break;
+        case "decimal":
+            result = "decimal";
+            break;
+        case "bool":
+            result = "bool";
+            break;
+        case "timespan":
+            result = "TimeSpan";
+            break;
+
+        default:
+            result = item.DataType;
+            break;
+    }
+    if (!item.IsRequired && item.DataType!="string")
+    {
+        result = string.Format("Nullable<{0}>", result);
+    }
+
+    return result;
+}
+public string BuildSummary(cfield item, string space)
+{
+    string result = "";
+    if (!string.IsNullOrEmpty(item.Description))
+    {
+        result += space + "/// <summary>";
+        result += space + "/// " + item.Description;
+        result += space + "/// </summary>";
+    }
+    return result;
+}
+
+public string BuildAttribute(cfield item, string space)
+{
+    string result = "";
+    string attrLine = space+"[{0}]";
+	if(!string.IsNullOrEmpty(item.DBField))
+	{
+		result += string.Format( attrLine, "Column(\"" + item.DBField + "\")");
+	}
+	result += string.Format( attrLine, "DataMember");	
+	if(item.IsPrimaryKey)
+	{
+		result += string.Format( attrLine, "Key");
+	}
+    if (item.DataType=="datetime")
+    {
+        result += string.Format( attrLine, "DataType(DataType.Date)");
+    }
+	if (item.DataType=="int")
+    {
+        result += string.Format( attrLine, "UIHint(\"Integer\")");
+    }
+	if (item.DataType=="decimal")
+    {
+		result += string.Format( attrLine, "UIHint(\"Decimal\")");
+    }
+    if (item.IsRequired)
+    {
+        string attribValue = string.Format("Required(ErrorMessageResourceType = typeof(App_GlobalResources.lang_{0}), ErrorMessageResourceName = \"{1}_{2}_Required\")", zone, citemName, item.Field);
+        result += string.Format(attrLine, attribValue);
+    }
+    if (!string.IsNullOrEmpty(item.Expression))
+    {
+        string attribValue = string.Format("RegularExpression({3} , ErrorMessageResourceType = typeof(App_GlobalResources.lang_{0}), ErrorMessageResourceName = \"{1}_{2}_Regular\")", zone, citemName, item.Field, item.Expression);
+        result += string.Format(attrLine, attribValue);
+    }
+    if (!string.IsNullOrEmpty(item.Range) && item.Range.Contains("-"))
+    {
+        string[] ranges = item.Range.Split('-');
+        string attribValue = string.Format("Range({3}, {4}, ErrorMessageResourceType = typeof(App_GlobalResources.lang_{0}), ErrorMessageResourceName = \"{1}_{2}_Range\")", zone, citemName, item.Field, ranges[0], ranges[1]);
+        result += string.Format(attrLine, attribValue);
+    }
+    if (!string.IsNullOrEmpty(item.StringLength) && item.StringLength.Contains("-"))
+    {
+        string[] stringLength = item.StringLength.Split('-');
+        string attribValue = string.Format("StringLength({4}, MinimumLength = {3}, ErrorMessageResourceType = typeof(App_GlobalResources.lang_{0}), ErrorMessageResourceName = \"{1}_{2}_StringLength\")", zone, citemName, item.Field, stringLength[0], stringLength[1]);
+        result += string.Format(attrLine, attribValue);
+    }
+    if (!string.IsNullOrEmpty(item.RemoteName))
+        {
+            string[] remotePart;
+
+            string RemoteController ="";
+            string RemoteCommand ="";
+            string AdditionalFields="";			
+            if (item.RemoteName.Contains("."))
+            {
+				RemoteController = item.RemoteName.Split('.')[0];
+				RemoteCommand = item.RemoteName.Split('.')[1];
+            }
+            else
+            {
+				RemoteController = zone;
+				RemoteCommand = item.RemoteName;
+            }
+                
+            AdditionalFields = item.RemoteAdditionalFields;
+
+            AdditionalFields = string.IsNullOrEmpty(AdditionalFields)?"": string.Format("AdditionalFields = \"{0}\", ",AdditionalFields) ;
+
+            //[Remote("GeneralCheckCodeAvailable", "LIST", AdditionalFields = "ID", ErrorMessageResourceType = typeof(App_GlobalResources.lang_LIST), ErrorMessageResourceName = "General_Code_NotAvailable")]
+            string attribValue = string.Format("Remote(\"{0}\", \"{1}\", {2} ErrorMessageResourceType = typeof(App_GlobalResources.lang_{3}), ErrorMessageResourceName = \"{4}_{5}_{6}\")",
+                                           RemoteCommand, RemoteController, AdditionalFields, zone, citemName, item.Field, "Remote");
+            result += string.Format(attrLine, attribValue);
+        }
+
+
+
+    return result;
+}
+
+public string tblName = "";
+public string zone = "";
+public string templateDirectory = "";
+public string citemName = "";
+public string tblID = "";
+EntityFrameworkTemplateFileManager fileManager;
+public class cfield
+{
+    public string   ID { get; set; }
+	public string   TableID { get; set; }
+	public string   Module { get; set; }
+	public string   DBTable { get; set; }
+	public string   DBField { get; set; }
+	public string   DBSize { get; set; }
+	public string   ModelName { get; set; }
+    public string   Field { get; set; }
+	public string   ResxEN { get; set; }
+	public string   ResxVN { get; set; }
+    public string   DataType { get; set; }
+    public bool     IsPrimaryKey { get; set; }
+	public bool     IsForeignKey { get; set; }
+	public bool     IsRequired { get; set; }
+	public string   ForeignTable { get; set; }
+	public string   ForeignTableID { get; set; }
+    public string   Expression { get; set; }
+    public string   Range { get; set; }
+    public string   StringLength { get; set; }
+    public string   RemoteName { get; set; }
+	public string   RemoteAdditionalFields { get; set; }
+	public string   RemoteResxEN { get; set; }
+	public string   RemoteResxVN{ get; set; }
+    public string   Description { get; set; }
+	public string   UpdatedBy { get; set; }
+	public string	UpdatedDate { get; set; }
+}
+#>

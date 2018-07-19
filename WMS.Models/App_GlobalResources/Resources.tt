@@ -1,0 +1,260 @@
+﻿<#@ template language="C#" debug="true" hostspecific="true"#>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ output extension=".cs"#>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.CodeDom.Compiler" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Data.OleDb" #>
+<#@ import namespace="System.Data.SqlClient" #> 
+<#@ import namespace="System.Collections.Generic" #>
+
+
+<#@ Assembly name="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll" #>
+
+<#
+try{
+	fileManager = EntityFrameworkTemplateFileManager.Create(this);
+	templateDirectory = Path.GetDirectoryName(Host.TemplateFile);
+	string inputDirectory = templateDirectory;
+	DataSet ds = new DataSet();
+	int idDatabase = 2;
+	string connectionString =
+					@"Data Source=3ps.vn;Initial Catalog=db_wms_3ps_vn_v2;User ID=wms_v2; Password=3ps123";
+	
+	//Get All ResourceDB
+	using (SqlConnection conn = new SqlConnection(connectionString))
+	{
+		 DataSet dsZone = new DataSet();
+                conn.Open();
+
+                string sql = string.Format("SELECT DISTINCT Zone FROM Resources where IDDatabase ={0}",idDatabase);
+                var command = new SqlCommand(sql, conn);
+                var adapter = new SqlDataAdapter(command);
+
+                adapter.Fill(dsZone);
+         conn.Close();
+		 //Get Zone List
+		 DataTable tbl = dsZone.Tables[0];
+            var data = tbl.AsEnumerable();
+            List<zoneList> zList = data.Where(x => x.Field<object>("Zone") != null).Select(x =>
+            new zoneList
+            {
+                Zone = x.Field<object>("Zone") == null ? "" : x.Field<object>("Zone").ToString(),
+            }).ToList();
+
+
+		foreach(var file in zList){
+			conn.Open();
+			sql = string.Format("SELECT  ID, KeyName, Zone, ValueVN, ValueEN, DescriptionEN, DescriptionVN FROM Resources where Zone = '{0}' AND IDDatabase ={1}",file.Zone,idDatabase);
+			command = new SqlCommand(sql,conn);
+			adapter = new SqlDataAdapter(command);
+
+			adapter.Fill(ds,file.Zone);
+			conn.Close();
+		}
+	}
+
+	foreach (DataTable tbl in ds.Tables)
+    {
+        var data = tbl.AsEnumerable();
+		List<cfield> rows = data.Where(x=>x.Field<object>("ID") !=null).Select(x =>
+        new cfield
+        {
+			ID = x.Field<object>("ID") == null? "":x.Field<object>("ID").ToString(),
+            KeyName = x.Field<object>("KeyName") == null? "":x.Field<object>("KeyName").ToString(),
+            ValueVN = x.Field<object>("ValueVN") == null ? "" : x.Field<object>("ValueVN").ToString(),
+            ValueEN = x.Field<object>("ValueEN") == null ? "" : x.Field<object>("ValueEN").ToString(),
+            DescriptionEN = x.Field<object>("DescriptionEN") == null ? "" : x.Field<object>("DescriptionEN").ToString(),
+			DescriptionVN = x.Field<object>("DescriptionVN") == null ? "" : x.Field<object>("DescriptionVN").ToString(),
+        }).ToList();
+
+		citemName = tbl.TableName;
+		
+		writeFileContent(rows);
+    }
+	fileManager.Process();
+}
+catch (Exception ex)
+{
+	this.Host.LogErrors(new CompilerErrorCollection() { new CompilerError("", 0, 0, "0",ex.Message) });
+}
+#>
+<#+
+public void writeFileContent(List<cfield> table)
+{
+	
+	string[] lang = {".vi-VN",""};
+	foreach(string cul in lang){
+		string outputFileName = string.Format("lang_{0}{1}.resx",citemName,cul);
+		string outputFilePath = Path.Combine(templateDirectory, outputFileName);
+		fileManager.StartNewFile(outputFilePath);
+#>
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <#+foreach(var item in table)
+  {
+	if(cul == ".vi-VN"){#>
+	<data name="<#=item.KeyName#>" xml:space="preserve">
+    <value><#=ConvertXML(item.ValueVN)#></value>
+	<comment><#=ConvertXML(item.DescriptionVN)#></comment>
+	<#+
+	}
+	else{#>
+	<data name="<#=item.KeyName#>" xml:space="preserve">
+    <value><#=ConvertXML(item.ValueEN)#></value>
+	<comment><#=ConvertXML(item.DescriptionEN)#></comment>
+	<#+}#>
+  </data>
+  <#+}#>
+  
+</root>
+
+	<#+}#>
+<#+}#>
+<#+public string ConvertXML(string str){
+return str.Replace("&", "&amp;").Replace("<", "&lt;").Replace(">", "&gt;").Replace("\"", "&quot;").Replace("'", "&apos;");
+}#>
+
+<#+
+public string zone = "";
+public string templateDirectory = "";
+public string citemName = "";
+public string citemDTOName = "";
+public string citemDBName = "";
+EntityFrameworkTemplateFileManager fileManager;
+public class cfield
+{
+	public string ID {get;set;}
+	public string KeyName {get;set;}
+	public string ValueEN {get;set;}
+	public string DescriptionEN {get;set;}
+	public string ValueVN {get;set;}
+	public string DescriptionVN {get;set;}
+}
+
+public class zoneList
+    {
+        public string Zone { get; set; }
+        
+    }
+#>

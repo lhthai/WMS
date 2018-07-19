@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/kendo/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/kendo")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: #f5f7f8;
+        }
+
+        nav a {
+            color: #fff;
+        }
+
+        a {
+            color: #000;
+        }
+
+        li {
+            list-style: none;
+            text-decoration: none;
+            transition: all 0.5s ease;
+        }
+
+        .big-nav {
+            background-color: #f5f7f8;
+            height: 100%;
+        }
+
+        .nav-sidebar li a {
+            height: 50px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .list-Item li a {
+            font-size: medium;
+            font-weight: normal;
+        }
+
+        .icon-flipped {
+            transform: scaleX(-1);
+            -moz-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            -ms-transform: scaleX(-1);
+        }
+
+        .small-nav {
+            height: 100%;
+            padding-left: 15px;
+            position: absolute;
+            width: 160px;
+            box-sizing: border-box;
+            z-index: 100;
+            transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+        }
+
+            .small-nav li a .name {
+                display: none;
+            }
+
+            .small-nav li:hover {
+                background-color: #f5f7f8;
+            }
+
+                .small-nav li:hover .name {
+                    display: inline-block;
+                }
+
+            .small-nav .list-item {
+                display: none;
+                background-color: #f5f7f8;
+            }
+
+            .small-nav > ul > li:hover .list-item {
+                display: inline-block;
+            }
+
+                .small-nav > ul > li:hover .list-item > li {
+                    display: inline-block;
+                }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top" style="background-color: #415e9c">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="pull-left navbar-brand">
+                    <a href="#" id="btn_Menu">
+                        <span class="glyphicon glyphicon-align-justify"></span>
+                    </a>
+                    <a href="#">
+                        Project name
+                    </a>
+                </div>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-map-marker"></span>
+                            facility
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-user"></span>
+                            Account
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-question"></span> Help
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="col-sm-12 col-md-12" style="height: 100%">
+        <div class="row" style="height: 100%">
+            <div class="small-nav hidden" style="height: 100%">
+                <ul class="nav nav-sidebar">
+                    <li>
+                        <a href="#" class="small-nav-header">
+                            <span class="glyphicon fa fa-truck icon-flipped"></span><span class="name"> Inbound</span>
+                        </a>
+                        <ul class="list-item">
+                            <li>
+                                <a href="#">ASN/Receipt</a>
+                            </li>
+                            <br />
+                            <li>
+                                <a href="#">Purchase Order</a>
+                            </li>
+                            <br />
+                            <li>
+                                <a href="#">Receipt Reversal</a>
+                            </li>
+                            <li>
+                                <br />
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="small-nav-header">
+                            <span class="glyphicon fa fa-truck"></span><span class="name"> Outbound</span>
+                        </a>
+                        <ul class="list-item">
+                            <li>
+                                <a href="#">Shipment Order</a>
+                            </li>
+                            <br />
+                            <li>
+                                <a href="#">Link</a>
+                            </li>
+                            <br />
+                            <li>
+                                <a href="#">Link</a>
+                            </li>
+                            <br />
+                            <li>
+                                <br />
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="small-nav-header">
+                            <span class="glyphicon glyphicon-wrench"></span> <span class="name"> Configuration</span>
+                        </a>
+                        <ul class="list-item">
+                            <li>
+                                <a href="#">Item</a>
+                            </li>
+                            <br />
+                            <li>
+                                <a href="#">Pack</a>
+                            </li>
+                            <br />
+                            <li>
+                                <a href="#">Cartorn</a>
+                            </li>
+                            <br />
+                            <li>
+                                <a href="#">Trading Partner</a>
+                            </li>
+                            <br />
+                            <li>
+                                <br />
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="small-nav-header">
+                            <span class="glyphicon fa fa-cubes"></span> <span class="name"> Execution</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-2 big-nav" style="height: 100%">
+                <ul class="nav nav-sidebar ">
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon fa fa-truck icon-flipped"></span>
+                            Inbound
+                            <span class="glyphicon glyphicon-chevron-down pull-right arrow"></span>
+                        </a>
+                        <ul class="list-item">
+                            <li>
+                                <a href="#">ASN/Receipt</a>
+                            </li>
+                            <li>
+                                <a href="#">Purchase Order</a>
+                            </li>
+                            <li>
+                                <a href="#">Receipt Reversal</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon fa fa-truck "></span> Outbound
+                            <span class="glyphicon glyphicon-chevron-down pull-right arrow"></span>
+                        </a>
+                        <ul class="list-item">
+                            <li>
+                                <a href="#">Shipment Order</a>
+                            </li>
+                            <li>
+                                <a href="#">Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Link</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-wrench"></span> Configuration
+                            <span class="glyphicon glyphicon-chevron-down pull-right arrow"></span>
+                        </a>
+                        <ul class="list-item">
+                            <li>
+                                <a href="#">Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Pack</a>
+                            </li>
+                            <li>
+                                <a href="#">Cartorn</a>
+                            </li>
+                            <li>
+                                <a href="#">Trading Partner</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=#"">
+                            <span class="glyphicon fa fa-cubes"></span> Execution
+                            <span class="glyphicon glyphicon-chevron-down pull-right arrow"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="body-content" class="col-sm-12 col-md-10" style="background-color: #fff">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+
+
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        var header = $(".big-nav>ul>li>a");
+        var bigNav = $(".big-nav");
+        var smallNav = $(".small-nav");
+        var bodyContent = $("#body-content");
+
+        header.click(function () {
+            console.log("comming here");
+            var listItem = $(this).next(".list-item");
+            var chervon = $(this).children(".arrow");
+            listItem.slideToggle("fast", function () { });
+            chervon.toggleClass("glyphicon-chevron-down", "fast", "easeOutSine");
+            chervon.toggleClass("glyphicon-chevron-right", "fast", "easeOutSine");
+        });
+
+        $("#btn_Menu").click(function () {
+            if (smallNav.hasClass("hidden")) {
+                bigNav.toggle("slide", { direction: "left" }, "fast", function () {
+                    smallNav.toggleClass("hidden", "fast", "easeOutSine");
+                });
+            } else {
+                smallNav.toggleClass("hidden", "fast", "easeOutSine", function () {
+                    bigNav.toggle("slide", { direction: "left" }, "fast", function () { });
+                });
+            }
+
+            bodyContent.toggleClass("col-md-10", "fast", "easeOutSine");
+            bodyContent.toggleClass("col-md-11 col-md-offset-1", "fast", "easeOutSine");
+        });
+    });
+</script>

@@ -1,0 +1,236 @@
+﻿<#@ template language="C#" debug="true" hostspecific="true"#>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ output extension=".cs"#>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.CodeDom.Compiler" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Data.OleDb" #>
+<#@ import namespace="System.Data.SqlClient" #> 
+<#@ import namespace="System.Collections.Generic" #>
+
+
+<#@ Assembly name="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll" #>
+
+
+<#
+try
+{
+	fileManager = EntityFrameworkTemplateFileManager.Create(this);
+	templateDirectory = Path.GetDirectoryName(Host.TemplateFile);
+	string inputDirectory = templateDirectory;
+	//khai bao id database
+	int idDatabase = 2;
+	string connectionString =
+					@"Data Source=3ps.vn;Initial Catalog=db_wms_3ps_vn_v2;User ID=wms_v2; Password=3ps123";
+
+	DataSet ds = new DataSet();
+            //Get All ResourceDB
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                DataSet dsZone = new DataSet();
+                conn.Open();
+
+                string sql = string.Format("SELECT DISTINCT Module FROM Tables where IDDatabase ="+idDatabase);
+                var command = new SqlCommand(sql, conn);
+                var adapter = new SqlDataAdapter(command);
+
+                adapter.Fill(dsZone);
+                conn.Close();
+                //Get Zone List
+                DataTable tbl = dsZone.Tables[0];
+                var data = tbl.AsEnumerable();
+                List<zoneList> zList = data.Where(x => x.Field<object>("Module") != null).Select(x =>
+                new zoneList
+                {
+                    Zone = x.Field<object>("Module") == null ? "" : x.Field<object>("Module").ToString(),
+                }).ToList();
+
+
+                foreach (var file in zList)
+                {
+                    conn.Open();
+                    sql = string.Format("SELECT Module, ModelName, DBField, DBSize, Field, ResxEN, ResxVN, DataType, Required, Expression, ExpressionResxEN, ExpressionResxVN, Range, StringLength, RemoteName, RemoteResxEN, RemoteResxVN, Description FROM Fields where Module = '{0}' AND IDDatabase = {1}" , file.Zone,idDatabase);
+                    command = new SqlCommand(sql, conn);
+                    adapter = new SqlDataAdapter(command);
+
+                    adapter.Fill(ds, file.Zone);
+                    conn.Close();
+                }
+            }
+
+            foreach (DataTable tbl in ds.Tables)
+    {
+        var data = tbl.AsEnumerable();
+        List<cfield> rows = data.Where(x=>x.Field<object>("Field") !=null).Select(x =>
+        new cfield
+        {
+            Zone = x.Field<object>("Module") == null ? "" : x.Field<object>("Module").ToString(),
+            ModelName = x.Field<object>("ModelName") == null ? "" : x.Field<object>("ModelName").ToString(),
+                        DBField = x.Field<object>("DBField") == null ? "" : x.Field<object>("DBField").ToString(),
+                        DBSize = x.Field<object>("DBSize") == null ? "" : x.Field<object>("DBSize").ToString(),
+                        Field = x.Field<object>("Field") == null ? "" : x.Field<object>("Field").ToString(),
+                        EN = x.Field<object>("ResxEN") == null ? "" : x.Field<object>("ResxEN").ToString(),
+                        VN = x.Field<object>("ResxVN") == null ? "" : x.Field<object>("ResxVN").ToString(),
+                        DataType = x.Field<object>("DataType") == null ? "" : x.Field<object>("DataType").ToString().ToLower(),
+                        IsRequired = Convert.ToBoolean(x.Field<object>("Required")),
+                        Expression = x.Field<object>("Expression") == null ? "" : x.Field<object>("Expression").ToString(),
+						ExpressionResxEN = x.Field<object>("ExpressionResxEN") == null ? "" : x.Field<object>("ExpressionResxEN").ToString(),
+						ExpressionResxVN = x.Field<object>("ExpressionResxVN") == null ? "" : x.Field<object>("ExpressionResxVN").ToString(),
+                        Range = x.Field<object>("Range") == null ? "" : x.Field<object>("Range").ToString(),
+                        StringLength = x.Field<object>("StringLength") == null ? "" : x.Field<object>("StringLength").ToString(),
+                        RemoteName = x.Field<object>("RemoteName") == null ? "" : x.Field<object>("RemoteName").ToString(),
+						RemoteResxEN = x.Field<object>("RemoteResxEN") == null ? "" : x.Field<object>("RemoteResxEN").ToString(),
+						RemoteResxVN = x.Field<object>("RemoteResxVN") == null ? "" : x.Field<object>("RemoteResxVN").ToString(),
+                        Description = x.Field<object>("Description") == null ? "" : x.Field<object>("Description").ToString(),
+						//IDDatabase = Convert.ToInt32(x.Field<object>("IDDatabase").ToString()),
+        }).ToList();
+
+        conn.ConnectionString = connectionString;
+        AddToDB(rows,idDatabase);
+            }
+    
+}
+catch (Exception ex)
+{
+	this.Host.LogErrors(new CompilerErrorCollection() { new CompilerError("", 0, 0, "0",ex.Message) });
+}
+#>
+<#+
+  public void AddToDB(List<cfield> table,int idDatabase)
+        {
+
+            if (table.Any())
+            {
+                foreach (var item in table)
+                {
+                    citemName = item.ModelName;
+                    string EN = item.EN;
+                    string VN = item.VN;
+                    string keyname = citemName + "_" + item.Field;
+                    AddResToDB(item, keyname,idDatabase);
+                    if (item.IsRequired)
+                    {
+                        keyname = citemName + "_" + item.Field + "_Required";
+                            item.VN = "Vui lòng nhập " + VN;
+                            item.EN = EN + " is required";
+                        AddResToDB(item, keyname,idDatabase);
+                    }
+                    if (item.Expression != "")
+                    {
+                        keyname = citemName + "_" + item.Field + "_Regular";
+                        item.VN = item.ExpressionResxVN;
+						item.EN = item.ExpressionResxEN;
+                        AddResToDB(item, keyname,idDatabase);
+                    }
+                    if (item.Range != "")
+                    {
+                        keyname = citemName + "_" + item.Field + "_Range";
+                        item.VN = string.Format("{0} chỉ trong khoảng {1}.", VN, item.Range.Replace("-", " đến "));
+                        item.EN = string.Format("Range of {0} should be between {1}", EN, item.Range.Replace("-", " and "));
+                        AddResToDB(item, keyname,idDatabase);
+                    }
+                    if (item.StringLength != "")
+                    {
+                        keyname = citemName + "_" + item.Field + "_StringLength";
+                        item.VN = string.Format("Vui lòng nhập {0} trong khoảng {1} kí tự.", VN, item.StringLength.Replace("-", " đến ")); //
+
+                        item.EN = string.Format("Length of {0} should be between {1}", EN, item.StringLength.Replace("-", " and "));
+                        AddResToDB(item, keyname,idDatabase);
+                    }
+                    if (item.RemoteName != "")
+                    {
+                        keyname = citemName + "_" + item.Field + "_" + "Remote";
+                        item.VN = item.RemoteResxVN;
+						item.EN = item.RemoteResxEN;
+                        AddResToDB(item, keyname,idDatabase);
+                    }
+                }
+            }
+
+        }
+
+        private void AddResToDB(cfield item, string keyname,int idDatabase)
+        {
+
+            
+            string sql;
+            if (CheckIsDoublicate(keyname, item.Zone,idDatabase))
+            {
+                sql = string.Format("UPDATE Resources SET ValueVN=N'{0}', ValueEN='{1}' WHERE KeyName='{2}' AND Zone='{3}' AND IDDatabase ={4}", item.VN, item.EN, keyname, item.Zone,idDatabase);
+            }
+            else
+            {
+                sql = string.Format("INSERT INTO Resources(KeyName,Zone,ValueVN,ValueEN,IDDatabase) VALUES ('{0}','{1}',N'{2}','{3}',{4})", keyname, item.Zone, item.VN, item.EN,idDatabase);
+            }
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+        }
+
+
+
+
+        public bool CheckIsDoublicate(string keyname, string zone,int idDatabase)
+        {
+
+            conn.Open();
+            bool result = false;
+            string sql = string.Format("Select * from Resources where KeyName='{0}' AND Zone = '{1}' AND IDDatabase ={2}", keyname, zone,idDatabase);
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                result = true;
+
+            }
+            conn.Close();
+            return result;
+
+        }
+#>
+
+
+<#+
+SqlConnection conn = new SqlConnection();
+                    
+public string zone = "";
+public string templateDirectory = "";
+public string citemName = "";
+public string citemDTOName = "";
+public string citemDBName = "";
+EntityFrameworkTemplateFileManager fileManager;
+ public class zoneList
+    {
+        public string Zone { get; set; }
+        
+    }
+       
+        public class cfield
+        {
+            public string Zone { get; set; }
+            public string ModelName { get; set; }
+            public string DBField { get; set; }
+            public string DBSize { get; set; }
+            public string Field { get; set; }
+            public string VN { get; set; }
+            public string EN { get; set; }
+            public string DataType { get; set; }
+            public bool IsRequired { get; set; }
+            public string Expression { get; set; }
+			public string ExpressionResxEN { get; set; }
+			public string ExpressionResxVN { get; set; }
+            public string Range { get; set; }
+            public string StringLength { get; set; }
+            public string RemoteName { get; set; }
+			public string RemoteResxEN { get; set; }
+			public string RemoteResxVN { get; set; }
+            public string Description { get; set; }
+			public int IDDatabase { get; set; }
+        }
+#>

@@ -1,0 +1,2251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  	<data name="ASN_ID" xml:space="preserve">
+    <value>Mã đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Total_Receipted_Qty" xml:space="preserve">
+    <value>Tổng SL nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Total_Expected_Qty" xml:space="preserve">
+    <value>Tổng SL dự kiến nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Schedule_receipt_date" xml:space="preserve">
+    <value>Ngày nhập theo lịch</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Actual_receipt_date" xml:space="preserve">
+    <value>Ngày nhập thực tế</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Date_created" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Expected_weight" xml:space="preserve">
+    <value>Trọng lượng dự kiến</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Expected_cube" xml:space="preserve">
+    <value>Số khối dự kiến</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_External_receipt" xml:space="preserve">
+    <value>Mã đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_External_receipt_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mã đơn hàng xuất trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Supplier_ID" xml:space="preserve">
+    <value>Mã nhà cung cấp</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Carrier_ID" xml:space="preserve">
+    <value>Mã nhà vận chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Warehouse_ID" xml:space="preserve">
+    <value>Mã kho</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Warehouse_ID_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mã kho trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_GRN_No" xml:space="preserve">
+    <value>Số ghi chú hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Date_time_print_GRN" xml:space="preserve">
+    <value>Thời gian in nhãn GRN</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_ASN_Detail_ID" xml:space="preserve">
+    <value>Mã đơn hàng nhập chi tiết</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Line_No" xml:space="preserve">
+    <value>Số dòng</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ASN_ID" xml:space="preserve">
+    <value>Mã đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Receipt_Line_No" xml:space="preserve">
+    <value>Số dòng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Total_quantity" xml:space="preserve">
+    <value>Tổng SL</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ASN_Code" xml:space="preserve">
+    <value>Code đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ASN_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code đơn hàng nhập trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Note" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Note_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_User_ID" xml:space="preserve">
+    <value>Mã người dùng</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ID" xml:space="preserve">
+    <value>Mã đơn hàng trả</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ID_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mã đơn hàng trả trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_Adjustment_number_ID" xml:space="preserve">
+    <value>Mã Số điều chỉnh</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_Adjustment_number_ID_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mã Số điều chỉnh trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ASN_ID" xml:space="preserve">
+    <value>Mã đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_Effective_date" xml:space="preserve">
+    <value>Ngày hiệu lực</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_ID" xml:space="preserve">
+    <value>Số dòng đơn hàng trả</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_ASN_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_Adjustment_Qty" xml:space="preserve">
+    <value>Số lượng điều chỉnh</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_Receipt_reversal_ID" xml:space="preserve">
+    <value>Mã đơn hàng trả</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Pack_ID" xml:space="preserve">
+    <value>Mã đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Location_ID" xml:space="preserve">
+    <value>Mã vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_1" xml:space="preserve">
+    <value>Lotable 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lotable 1 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_2" xml:space="preserve">
+    <value>Lotable 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lotable 2 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_3" xml:space="preserve">
+    <value>Lotable 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_4" xml:space="preserve">
+    <value>Lotable 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_11" xml:space="preserve">
+    <value>Lotable 11</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_12" xml:space="preserve">
+    <value>Lotable 12</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_5" xml:space="preserve">
+    <value>Lotable 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_5_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lotable 5 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_6" xml:space="preserve">
+    <value>Lotable 6</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_6_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lotable 6 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Lotable_10" xml:space="preserve">
+    <value>Lotable 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ReceiptStatus_ID" xml:space="preserve">
+    <value>Mã trạng thái đơn hàng nhận hệ thống</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Expected_Qty" xml:space="preserve">
+    <value>Số lượng dự kiến</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Received_Qty" xml:space="preserve">
+    <value>Số lượng đã nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_1" xml:space="preserve">
+    <value>Người dùng định nghĩa 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 1 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_2" xml:space="preserve">
+    <value>Người dùng định nghĩa 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 2 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_3" xml:space="preserve">
+    <value>Người dùng định nghĩa 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_3_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 3 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_4" xml:space="preserve">
+    <value>Người dùng định nghĩa 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_4_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 4 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_5" xml:space="preserve">
+    <value>Người dùng định nghĩa 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UDF_5_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 5 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Notes" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Notes_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Discrepancy_Qty" xml:space="preserve">
+    <value>Số lượng chênh lệch</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_C_System_HoldCode_ID" xml:space="preserve">
+    <value>Mã giữ hàng hệ thống</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_ID" xml:space="preserve">
+    <value>Mã đơn hàng mua</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_PO_Code" xml:space="preserve">
+    <value>Code đơn hàng mua</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_PO_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code đơn hàng mua trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_Owner_ID" xml:space="preserve">
+    <value>Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_Supplier_ID" xml:space="preserve">
+    <value>Mã nhà cung cấp</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_C_System_POStatus_ID" xml:space="preserve">
+    <value>Mã trạng thái đơn hàng mua hệ thống</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_PO_date" xml:space="preserve">
+    <value>Ngày đơn hàng mua</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_Expected_receipt_date" xml:space="preserve">
+    <value>Ngày nhập dự kiến</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_Total_Order_Qty" xml:space="preserve">
+    <value>Tổng SL đơn hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_Notes" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_Notes_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_PO_ID" xml:space="preserve">
+    <value>Mã đơn hàng mua</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_PO_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã đơn hàng mua</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Order_Line_No" xml:space="preserve">
+    <value>Số dòng của đơn hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Order_Line_No_Required" xml:space="preserve">
+    <value>Vui lòng nhập Số dòng của đơn hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Item_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Oder_Line_No" xml:space="preserve">
+    <value>Số dòng của đơn hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_C_System_POStatus_ID" xml:space="preserve">
+    <value>Mã trạng thái đơn hàng mua hệ thống</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Notes" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_Notes_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_1" xml:space="preserve">
+    <value>Người dùng định nghĩa 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 1 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_2" xml:space="preserve">
+    <value>Người dùng định nghĩa 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 2 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_3" xml:space="preserve">
+    <value>Người dùng định nghĩa 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_3_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 3 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_4" xml:space="preserve">
+    <value>Người dùng định nghĩa 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_4_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 4 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_5" xml:space="preserve">
+    <value>Người dùng định nghĩa 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_UDF_5_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người dùng định nghĩa 5 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Pallet_Label" xml:space="preserve">
+    <value>Nhãn pallet</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_Pallet_Label_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Nhãn pallet trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_CreatedDate" xml:space="preserve">
+    <value>Ngày được tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_IsDeleted" xml:space="preserve">
+    <value>Đã xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_IsDeleted" xml:space="preserve">
+    <value>Đã xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Created_By" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Created_By_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_Created_Date" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Zone_Code" xml:space="preserve">
+    <value>Code vùng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Zone_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code vùng trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Description" xml:space="preserve">
+    <value>Mô tả</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Description_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mô tả trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_ReplenishmentlevelDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết cấp độ bơm hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Location_ID" xml:space="preserve">
+    <value>Mã vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Max_Pallets_per_item" xml:space="preserve">
+    <value>Số lượng pallet tối đa cho một loại item</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Maximum_Cube" xml:space="preserve">
+    <value>Số khối tối đa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Maximum_Weight" xml:space="preserve">
+    <value>Trọng lượng tối đa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Maximum_Case_Count" xml:space="preserve">
+    <value>Số lượng case tối đa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Max_Pick_Line" xml:space="preserve">
+    <value>Số dòng lấy tối đa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Max_Pick_Container" xml:space="preserve">
+    <value>Số Container được lấy tối đa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_PositiveValidationMethod_ID" xml:space="preserve">
+    <value>Mã phương thức xác nhận tăng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_Replenishment_MethodDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết phương thức bơm hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Location_Code" xml:space="preserve">
+    <value>Code vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Location_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code vị trí trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Location_Type_ID" xml:space="preserve">
+    <value>Mã loại vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Location_Type_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã loại vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Zone_ID" xml:space="preserve">
+    <value>Mã vùng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Flag_ID" xml:space="preserve">
+    <value>Mã cờ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Category_ID" xml:space="preserve">
+    <value>Mã danh mục</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Cominglelots" xml:space="preserve">
+    <value>Mã trộn theo lot</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Comingleitems" xml:space="preserve">
+    <value>Mã trộn theo hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Cubic_Capacity" xml:space="preserve">
+    <value>Sức chứa của khối</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Status_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Trạng thái trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_C_System_MovingspeedDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết tốc độ luân chuyển của vị trí hệ thống</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Height" xml:space="preserve">
+    <value>Chiều cao</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Length" xml:space="preserve">
+    <value>Chiều dài</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Width" xml:space="preserve">
+    <value>Bề dày</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Level" xml:space="preserve">
+    <value>Cấp độ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_X_coordinate" xml:space="preserve">
+    <value>Tọa độ X</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Y_coordinate" xml:space="preserve">
+    <value>Tọa độ Y</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Z_coordinate" xml:space="preserve">
+    <value>Tọa độ Z</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Orientation" xml:space="preserve">
+    <value>Hướng của vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Weight_Capacity" xml:space="preserve">
+    <value>Sức chứa trọng lượng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Stack_Limit" xml:space="preserve">
+    <value>Số pallet tối đa về chiều dọc </value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_LocationhandlingDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết xử lý vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Foot_Print" xml:space="preserve">
+    <value>Số pallet tối đa về chiều ngang</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_UOM_ID" xml:space="preserve">
+    <value>Mã đơn vị hàng hóa</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_UOM_ID" xml:space="preserve">
+    <value>Mã đơn vị hàng hóa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Location_StatusDetail_ID" xml:space="preserve">
+    <value>Mã chi tiết trạng thái vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_Movingspeed_ID" xml:space="preserve">
+    <value>Mã tốc độ luân chuyển vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ReceiptStatus_ID" xml:space="preserve">
+    <value>Tình Trạng Receipe</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_ReceiptStatus_ID" xml:space="preserve">
+    <value>Mã trạng thái đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_ReceiptStatus_ID" xml:space="preserve">
+    <value>Mã trạng thái đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_ID" xml:space="preserve">
+    <value>Mã vùng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Zone_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã vùng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_ID" xml:space="preserve">
+    <value>Mã vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Location_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_ID" xml:space="preserve">
+    <value>Mã</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Name" xml:space="preserve">
+    <value>Tên</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Name_Required" xml:space="preserve">
+    <value>Vui lòng nhập Tên</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Name_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Tên trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Description" xml:space="preserve">
+    <value>Mô tả</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Description_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Mô tả trong khoảng 200 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_ID" xml:space="preserve">
+    <value>Mã</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_step" xml:space="preserve">
+    <value>Bước</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_step_Required" xml:space="preserve">
+    <value>Vui lòng nhập Bước</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Puttaway_Type_ID" xml:space="preserve">
+    <value>Kiểu Putaway</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_zone_ID" xml:space="preserve">
+    <value>Mã Khu Vực</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_from_location" xml:space="preserve">
+    <value>Từ Vị Trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_to_location" xml:space="preserve">
+    <value>Đến Vị Trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Demention_Restriction_1" xml:space="preserve">
+    <value>Hạn Chế Kích Thước</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Demention_Restriction_2" xml:space="preserve">
+    <value>Hạn Chế Kích Thước 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Demention_Restriction_3" xml:space="preserve">
+    <value>Hạn Chế Kích Thước 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Demention_Restriction_4" xml:space="preserve">
+    <value>Hạn Chế Kích Thước  4</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Demention_Restriction_5" xml:space="preserve">
+    <value>Hạn Chế Kích Thước 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_Multi_Pallet" xml:space="preserve">
+    <value>Nhiều Pallet</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_check_restriction" xml:space="preserve">
+    <value>Kiểm Tra Giới Hạn</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_area_restriction_1" xml:space="preserve">
+    <value>Giới Hạn Khu Vực 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_area_restriction_2" xml:space="preserve">
+    <value>Giới Hạn Khu Vực 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_area_restriction_3" xml:space="preserve">
+    <value>Giới Hạn Khu Vực 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_putaway_strategy_ID" xml:space="preserve">
+    <value>Mã Putaway</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_putaway_strategy_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã Putaway</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_LPN" xml:space="preserve">
+    <value>LPN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_ID" xml:space="preserve">
+    <value>Mã owner label</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Barcode_Format" xml:space="preserve">
+    <value>Định dạng barcode LPN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Barcode_Format_Required" xml:space="preserve">
+    <value>Vui lòng nhập Định dạng barcode LPN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Length" xml:space="preserve">
+    <value>Độ Dài LPN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Length_Required" xml:space="preserve">
+    <value>Vui lòng nhập Độ Dài LPN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Start_Number" xml:space="preserve">
+    <value>Số Bắt Đầu Của LPN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Next_Number" xml:space="preserve">
+    <value>Bước Nhảy Tới Số Kế Tiếp</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_LPN_Next_Number_Required" xml:space="preserve">
+    <value>Vui lòng nhập Bước Nhảy Tới Số Kế Tiếp</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_Roll_Back_Number" xml:space="preserve">
+    <value>Số Reset LPN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_Roll_Back_Number_Required" xml:space="preserve">
+    <value>Vui lòng nhập Số Reset LPN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_Case_Label_Type" xml:space="preserve">
+    <value>Loại nhãn case</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_Owner_ID" xml:space="preserve">
+    <value>Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_ID" xml:space="preserve">
+    <value>Mã đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_SO_Code" xml:space="preserve">
+    <value>Code đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_SO_Code_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Code đơn hàng xuất trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Owner_ID" xml:space="preserve">
+    <value>Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Owner_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_OutboundstatusID" xml:space="preserve">
+    <value>Mã trạng thái xuất hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Priority_ID" xml:space="preserve">
+    <value>Mã ưu tiên</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Type_ID" xml:space="preserve">
+    <value>Mã loại hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Type_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã loại hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Customer_ID" xml:space="preserve">
+    <value>Mã khách hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Total_Quantity" xml:space="preserve">
+    <value>Tổng số lượng</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Order_Date" xml:space="preserve">
+    <value>Ngày đặt hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Requested_Ship_Date" xml:space="preserve">
+    <value>Ngày yêu cầu vận chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Actual_Ship_Date" xml:space="preserve">
+    <value>Ngày vận chuyển thực tế</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Carrier_ID" xml:space="preserve">
+    <value>Mã nhà vận chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Driver_Name" xml:space="preserve">
+    <value>Tên tài xế</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Driver_Name_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Tên tài xế trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Truck_Number" xml:space="preserve">
+    <value>Số xe </value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Truck_Number_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Số xe  trong khoảng 20 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Remark" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Remark_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_IsDelete" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_IsDelete" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_SO_ID" xml:space="preserve">
+    <value>Mã đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_SO_Line_No" xml:space="preserve">
+    <value>Số dòng đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_SO_Line_No_Required" xml:space="preserve">
+    <value>Vui lòng nhập Số dòng đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Item_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Pack_ID" xml:space="preserve">
+    <value>Mã đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Pack_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Order_Quantity" xml:space="preserve">
+    <value>Số lượng đơn hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Order_Quantity_Required" xml:space="preserve">
+    <value>Vui lòng nhập Số lượng đơn hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Quantity" xml:space="preserve">
+    <value>Số lượng</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Quantity_Required" xml:space="preserve">
+    <value>Vui lòng nhập Số lượng</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Allocated_Quantity" xml:space="preserve">
+    <value>Số lượng được chỉ định vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Picked_Quantity" xml:space="preserve">
+    <value>Số lượng đã lấy</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Picked_Quantity_Required" xml:space="preserve">
+    <value>Vui lòng nhập Số lượng đã lấy</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_Shipped_Quantity" xml:space="preserve">
+    <value>Số lượng đã vận chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết lấy hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_SO_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_Lot_Attribute_ID" xml:space="preserve">
+    <value>Mã thuộc tính lot</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_Location_ID" xml:space="preserve">
+    <value>Mã vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_PickStatus_ID" xml:space="preserve">
+    <value>Mã trạng thái lấy hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_Picking_Line_No" xml:space="preserve">
+    <value>Số dòng lấy hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_Quantity" xml:space="preserve">
+    <value>Số lượng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_Pack_ID" xml:space="preserve">
+    <value>Mã đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_ID" xml:space="preserve">
+    <value>Mã danh sách lấy hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_Warehouse_ID" xml:space="preserve">
+    <value>Mã kho</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_SO_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_Note" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_Note_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Ghi chú trong khoảng 2000 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_Printed_Date" xml:space="preserve">
+    <value>Ngày in</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_ID" xml:space="preserve">
+    <value>Mã danh sách đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_SO_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Packing_List_Note_No" xml:space="preserve">
+    <value>Số ghi chú danh sách đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Batch_Note" xml:space="preserve">
+    <value>Số batch</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Batch_Note_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Số batch trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Lot_No_Note" xml:space="preserve">
+    <value>Số lot</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Lot_No_Note_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Số lot trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_M3_Note" xml:space="preserve">
+    <value>Số khối</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Kg_Note" xml:space="preserve">
+    <value>Cân nặng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Pack_Note" xml:space="preserve">
+    <value>Đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Pack_Note_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Đóng gói trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_Qty_Note" xml:space="preserve">
+    <value>Số lượng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_ID" xml:space="preserve">
+    <value>Mã giao dịch</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_Activity_ID" xml:space="preserve">
+    <value>Mã hoạt động</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_User_Add" xml:space="preserve">
+    <value>Người thêm</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_Edit_Date" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_Add_Date" xml:space="preserve">
+    <value>Ngày thêm</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_IsDeleted" xml:space="preserve">
+    <value>Được xóa không</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_ID" xml:space="preserve">
+    <value>Mã di chuyển hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Location_ID" xml:space="preserve">
+    <value>Mã vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Quantity" xml:space="preserve">
+    <value>Số lượng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Quantity_Allocated" xml:space="preserve">
+    <value>Số lượng đã được chỉ định</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Quantity_Available" xml:space="preserve">
+    <value>Số lượng khả dụng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_LPN" xml:space="preserve">
+    <value>LPN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_LPN_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập LPN trong khoảng 20 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_To_Location" xml:space="preserve">
+    <value>Di chuyển đến vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_To_Location_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Di chuyển đến vị trí trong khoảng 10 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_Quantity_To_Move" xml:space="preserve">
+    <value>Số lượng di chuyển</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_ID" xml:space="preserve">
+    <value>Mã quản lý hàng bị giữ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_Lot_ID" xml:space="preserve">
+    <value>Mã số lot</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_Location_ID" xml:space="preserve">
+    <value>Mã vị trí</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_Holdreason_ID" xml:space="preserve">
+    <value>Mã lý do giữ hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_Date_On" xml:space="preserve">
+    <value>Ngày thêm hàng bị giữ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_Date_Off" xml:space="preserve">
+    <value>Ngày bỏ hàng bị giữ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_User_ID" xml:space="preserve">
+    <value>Mã người dùng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_ID" xml:space="preserve">
+    <value>Mã điều chỉnh</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Owner_ID" xml:space="preserve">
+    <value>Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Adjustment_Date" xml:space="preserve">
+    <value>Ngày điều chỉnh</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_User_ID" xml:space="preserve">
+    <value>Mã người dùng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết điều chỉnh</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_Line" xml:space="preserve">
+    <value>Dòng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_ASN_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết ASN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_Pack_ID" xml:space="preserve">
+    <value>Mã đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_AdjustmentReasonID" xml:space="preserve">
+    <value>Mã lý do điều chỉnh</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_Adjustment_Quantity" xml:space="preserve">
+    <value>Số lượng điều chỉnh</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_Target_Quantity" xml:space="preserve">
+    <value>Số lượng mục tiêu</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_Current_Quantity" xml:space="preserve">
+    <value>Số lượng hiện tại</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_Adjustment_ID" xml:space="preserve">
+    <value>Mã điều chỉnh</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_ID" xml:space="preserve">
+    <value>Mã số lot</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Owner_ID" xml:space="preserve">
+    <value>Mã chủ sở hữu</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_1" xml:space="preserve">
+    <value>Lottable 1</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_1_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lottable 1 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_2" xml:space="preserve">
+    <value>Lottable 2</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_2_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lottable 2 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_3" xml:space="preserve">
+    <value>Lottable 3</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_4" xml:space="preserve">
+    <value>Lottable 4</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_5" xml:space="preserve">
+    <value>Lottable 5</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_5_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lottable 5 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_6" xml:space="preserve">
+    <value>Lottable 6</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_6_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lottable 6 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_11" xml:space="preserve">
+    <value>Lottable 11</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_12" xml:space="preserve">
+    <value>Lottable 12</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_7" xml:space="preserve">
+    <value>Lottable 7</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_7_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lottable 7 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_8" xml:space="preserve">
+    <value>Lottable 8</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_8_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lottable 8 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_9" xml:space="preserve">
+    <value>Lottable 9</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_9_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lottable 9 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_10" xml:space="preserve">
+    <value>Lottable 10</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_Lottable_10_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Lottable 10 trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_ASN_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết ASN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_ID" xml:space="preserve">
+    <value>Mã bơm hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_Item_ID" xml:space="preserve">
+    <value>Mã hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_ASN_Receipt_ID" xml:space="preserve">
+    <value>Mã ASN/Receipt</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_Input_Qty" xml:space="preserve">
+    <value>Số lượng nhập vào</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_User_Update" xml:space="preserve">
+    <value>Người cập nhật</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_CreateDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_ModifiedBy" xml:space="preserve">
+    <value>người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_IsDeleted" xml:space="preserve">
+    <value>đã xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_ID" xml:space="preserve">
+    <value>Mã chi tiết đơn hàng mua</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_Note" xml:space="preserve">
+    <value>Ghi chú</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_To_LPN" xml:space="preserve">
+    <value></value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_ID" xml:space="preserve">
+    <value>Mã gom hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_LPN_New" xml:space="preserve">
+    <value>LPN mới</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_LPN_New_Required" xml:space="preserve">
+    <value>Vui lòng nhập LPN mới</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_ASN_Detail_ID" xml:space="preserve">
+    <value>Mã chi tiết ASN</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_ModifiedBy" xml:space="preserve">
+    <value>Người chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_ModifiedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người chỉnh sửa trong khoảng 50 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_ModifiedDate" xml:space="preserve">
+    <value>Ngày chỉnh sửa</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_IsDeleted" xml:space="preserve">
+    <value>Được xóa chưa</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASN_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_ID" xml:space="preserve">
+    <value>Số ghi chú hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Số ghi chú hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversal_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã đơn hàng trả</value>
+	<comment></comment>
+	  </data>
+  	<data name="ReceiptReversalDetail_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Số dòng đơn hàng trả</value>
+	<comment></comment>
+	  </data>
+  	<data name="PO_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã đơn hàng mua</value>
+	<comment></comment>
+	  </data>
+  	<data name="ASNDetail_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã chi tiết đơn hàng nhập</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_CreatedBy_StringLength" xml:space="preserve">
+    <value>Vui lòng nhập Người tạo trong khoảng 100 kí tự.</value>
+	<comment></comment>
+	  </data>
+  	<data name="GoodReceiptNote_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã</value>
+	<comment></comment>
+	  </data>
+  	<data name="Strategy_Putaway_Step_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã</value>
+	<comment></comment>
+	  </data>
+  	<data name="Owner_Label_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã owner label</value>
+	<comment></comment>
+	  </data>
+  	<data name="SO_Detail_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã chi tiết đơn hàng xuất</value>
+	<comment></comment>
+	  </data>
+  	<data name="Pick_Detail_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã chi tiết lấy hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã danh sách lấy hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Packing_List_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã danh sách đóng gói</value>
+	<comment></comment>
+	  </data>
+  	<data name="Transaction_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã giao dịch</value>
+	<comment></comment>
+	  </data>
+  	<data name="Move_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã di chuyển hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Maintain_Hold_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã quản lý hàng bị giữ</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã điều chỉnh</value>
+	<comment></comment>
+	  </data>
+  	<data name="Adjustment_Detail_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã chi tiết điều chỉnh</value>
+	<comment></comment>
+	  </data>
+  	<data name="Lot_Attribute_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã số lot</value>
+	<comment></comment>
+	  </data>
+  	<data name="Replenishment_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã bơm hàng</value>
+	<comment></comment>
+	  </data>
+  	<data name="Picking_List_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+	<comment></comment>
+	  </data>
+  	<data name="PODetail_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã chi tiết đơn hàng mua</value>
+	<comment></comment>
+	  </data>
+  	<data name="Consolidate_ID_Required" xml:space="preserve">
+    <value>Vui lòng nhập Mã gom hàng</value>
+	<comment></comment>
+	  </data>
+    
+</root>
+
+	
